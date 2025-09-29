@@ -1,0 +1,14 @@
+---
+
+import Contacts  from "@/components/react/UI/Contact";
+import Layout from '@/layouts/Layout.astro';
+import fr from '@/locales/fr.json';
+import en from '@/locales/en.json';
+
+const currentLocale = Astro.currentLocale || 'en';
+const content = { fr, en };
+const t = content[currentLocale as keyof typeof content] || content.en;
+---
+<Layout title="IT-EXPERTS-4-AFRICA | Contact">
+    <Contacts client:load t={t} />
+</Layout>

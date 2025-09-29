@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { ServicesSection } from '@/components/react/sections/Services';
+import SectionAbout from '@/components/react/sections/SectionAbout';
+import Hero from '@/components/react/sections/Hero';
+import CtaSection from '@/components/react/sections/CtaSection';
+import SectorsActiviter from '@/components/react/sections/SectorsActiviter';
+import SectionPartner from '@/components/react/sections/SectionPartner';
+import SplashScreen from "@/components/react/UI/components/SplashScreen";
+
+import fr from "@/locales/fr.json";
+import en from "@/locales/en.json";
+
+const currentLocale = 'fr';
+const content = { fr, en };
+const t = content[currentLocale as keyof typeof content] || content.fr;
+---
+
+<Layout title="IT-EXPERTS-4-AFRICA | Home" langPath={currentLocale} >
+    <Hero client:load t={t} />
+    <ServicesSection client:load t={t} />
+    <SectorsActiviter client:load t={t} />
+    <SectionAbout client:only t={t} />
+    <CtaSection  client:only t={t} />
+    <SectionPartner client:only t={t} />
+            <!-- SplashScreen Component -->
+            <SplashScreen client:only />
+</Layout>

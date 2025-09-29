@@ -1,0 +1,121 @@
+---
+import "@/styles/global.css";
+import "@radix-ui/themes/styles.css";
+import Header from "@/components/react/UI/Header";
+import Footer from "@/components/react/UI/Footer";
+import AnimatedNetworkBackground from "@/components/react/UI/Animation/AnimetedNetworkBackground";
+import TracingBeam from "@/components/uiAceternity/UI/components/TracingBeam";
+import Analytics from "@vercel/analytics/astro";
+import ScrollArrow from "@/components/react/UI/components/ScrollArrow";
+import { ClientRouter } from "astro:transitions";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import fr from "@/locales/fr.json";
+import en from "@/locales/en.json";
+import { fade } from 'astro:transitions';
+
+export interface Props {
+  langPath?:string;
+  title?: string;
+  description?: string;
+}
+
+const currentLocale = Astro.currentLocale || 'fr';
+const {
+  title = "IT-EXPERTS-4-AFRICA",
+  description = "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.",
+  langPath = currentLocale } = Astro.props;
+
+
+const content = { fr, en };
+const t = content[currentLocale as keyof typeof content] || content.fr;
+---
+
+<!doctype html>
+<html class="scroll-smooth" lang={langPath}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="title" content="http://itexperts4africa.com.com/" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="apple-mobile-web-app-title" content="IT-EXPERTS-4-AFRICA" />
+
+     <!-- Hreflang pour SEO multilingue -->
+    <link rel="alternate" hreflang="fr" href={`https://itexperts4africa.com.com${getRelativeLocaleUrl('fr', Astro.url.pathname)}`} />
+    <link rel="alternate" hreflang="en" href={`https://itexperts4africa.com.com${getRelativeLocaleUrl('en', Astro.url.pathname)}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://itexperts4africa.com.com${Astro.url.pathname}`} />
+
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="http://itexperts4africa.com.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="IT-EXPERTS-4-AFRICA" />
+    <meta property="og:image" content="https://ogcdn.net/c64a2e45-24fd-4359-a429-c7a45a78fbe8/v1/itexperts4africa/IT%20Experts%0A4%20Africa/Boostez%20la%20performance%20de%20votre%20entreprise%20gr%C3%A2ce%20%C3%A0%20des%20solutions%20r%C3%A9seau%20sur%20mesure.Nous%20accompagnons%20les%20PME%20et%20grandes%20structures%20dans%20l%E2%80%99installation%2C%20la%20gestion%20et%20la%20s%C3%A9curisation%20de%20leurs%20infrastructures%20informatiques./https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F4df55c30-02c4-4373-b5ad-180323229784.png%3Ftoken%3DtN6JC1VT6-frjkv4BDRmjdcWTfJVFOpsfqQNwBJSDH0%26height%3D415%26width%3D805%26expires%3D33289208197/og.png" />
+
+    <!-- HTML Meta Tags -->
+    <meta
+      name="description"
+      content={`${t.descriptionHeader}`}
+      property="og:type"
+      content="website"
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/faviconLight/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/faviconLight/favicon-96x96.png"
+    />
+    <link rel="shortcut icon" href="/favicon/faviconLight/favicon-96x96.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/faviconLight/apple-touch-icon.png"
+    />
+    <ClientRouter />
+    <link rel="manifest" href="/favicon/faviconLight/site.webmanifest" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="itexperts4africa.com.com" />
+    <meta property="twitter:url" content="http://itexperts4africa.com.com/" />
+    <meta name="twitter:title" content="IT-EXPERTS-4-AFRICA" />
+    <meta
+      name="twitter:description"
+      content={`${t.description}`}
+    />
+    <meta name="twitter:image" content="/sitePreview.png" />
+    <meta http-equiv="redirect" content="0;url=/fr/" />
+    <title title="IT-EXPERTS-4-AFRICA">{title}</title>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-it4a-secondary via-neutral-800 to-it4a-primary/80 box-border font-Poppins" 
+    transition:animate="fade"
+  >
+    <AnimatedNetworkBackground className="-z-200" client:only />
+    <Header
+      client:load
+      className="fixed"
+      logo="/WhiteLogo.png"
+      navItems={t.nav}
+      ctaButton={{ label: t.cta, href: "/contact" }}
+      bannerText={t.bannertext}
+    />
+    <main class="snap-mandatory flex items-center flex-col justify-center">
+      <TracingBeam client:only>
+        <ScrollArrow client:only />
+        <slot/>
+    </main>
+    <Footer client:load bgGradient="bg-transparent backdrop-blur-xs" lang={langPath} t={t} />
+    <Analytics client:only />
+
+  </body>
+</html>

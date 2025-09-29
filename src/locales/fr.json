@@ -1,0 +1,302 @@
+{
+  "bannertext": "🔔 Profitez de notre offre spéciale de lancement",
+  "nav": [
+    { "label": "Accueil", "href": "/" },
+    {
+      "label": "Services",
+      "href": "#services",
+      "subItems": [
+        { "label": "Tous les services", "href": "/services" },
+        { "label": "Ingénierie / Design", "href": "/services/ingenierie-design"},
+        { "label": "Implémentation", "href": "/services/implementation" },
+        { "label": "Études", "href": "/services/etudes" },
+        { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
+        { "label": "Gestion de Projets", "href": "/services/gestion-projets" },
+        { "label": "Support et Exploitation", "href": "/services/support-exploitation" },
+        { "label": "Formation IT", "href": "/services/formation-it" },
+        { "label": "Développement d'applications", "href": "/services/developpement-applications" }
+      ]
+    },
+    { "label": "À propos", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "cta": "Contactez-nous",
+  "description": "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.",
+  "descriptionHeader": "Boostez la performance de votre entreprise grâce à des solutions réseau sur mesure.Nous accompagnons les PME et grandes structures dans l’installation, la gestion et la sécurisation de leurs infrastructures informatiques.",
+  "sectors": {
+    "title1": "Secteurs",
+    "title2": "IT ",
+    "description": "Nous accompagnons les entreprises de tous secteurs avec des technologies de pointe",
+    "items": {
+      "health": "Santé",
+      "finance_banking_insurance": "Finance & Banque / Assurances",
+      "telecommunications_media": "Télécommunications & Médias",
+      "security": "Securite",
+      "education_training": "Éducation & Formation",
+      "public_sector_administrations": "Secteur Public & Administrations"
+    }
+  },
+  "services_section": {
+    "title1": "Nos services",
+    "title2": "IT sur mesure",
+    "description": "Des solutions complètes pour accompagner votre transformation numérique",
+    "items": {
+      "engineering_design": {
+        "title": "Ingénierie / Design",
+        "description": "Conception d’architectures réseau et IT sur mesure, alignées sur vos enjeux métiers."
+      },
+      "implementation": {
+        "title": "Implémentation",
+        "description": "Déploiement rapide et sécurisé de vos solutions technologiques."
+      },
+      "studies": {
+        "title": "Études",
+        "description": "Analyses stratégiques pour optimiser vos choix IT et maximiser le ROI."
+      },
+      "audit_amoa": {
+        "title": "Audit / AMOA",
+        "description": "Évaluation indépendante et accompagnement pour vos projets de transformation numérique."
+      },
+      "project_management": {
+        "title": "Gestion de Projets",
+        "description": "Pilotage rigoureux garantissant délais, coûts et résultats maîtrisés."
+      },
+      "support_operations": {
+        "title": "Support et Exploitation",
+        "description": "Supervision et maintenance proactive pour assurer continuité et performance."
+      },
+      "it_training": {
+        "title": "Formation IT",
+        "description": "Programmes adaptés pour renforcer durablement les compétences de vos équipes."
+      },
+      "application_development": {
+        "title": "Développement d’applications",
+        "description": "Solutions logicielles sur mesure adaptées à vos besoins spécifiques."
+      }
+    }
+  },
+  "cta_section": {
+    "title1": "Transformer votre",
+    "title2": "infrastructure IT ?",
+    "description": "Contactez nos experts dès aujourd'hui pour une consultation gratuite et découvrez comment nous pouvons optimiser vos systèmes.",
+    "contact_button": "Contactez nous",
+    "learn_more_button": "En Savoir Plus "
+  },
+  "contact": {
+    "hero_pre": "Contactez",
+    "hero_post": "Nous",
+    "hero_description": "Une question ? Un projet ? Parlons-en ! Notre équipe est là pour vous accompagner dans votre transformation numérique.",
+    "form_title": "Envoyez-nous un message",
+    "form_description": "Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement.",
+    "form_labels": {
+      "name": "Nom complet *",
+      "email": "Adresse email *",
+      "message": "Message *"
+    },
+    "form_placeholders": {
+      "name": "Votre nom et prénom",
+      "email": "votre.email@exemple.com",
+      "message": "Décrivez votre projet ou votre besoin..."
+    },
+    "submit_text": "Envoyer le message",
+    "submitting_text": "Envoi en cours...",
+    "success_message": "Votre message a été transmis avec succès ! Nous vous recontacterons très bientôt.",
+    "send_another": "Envoyer un autre message",
+    "contact_subtitle": "Plusieurs moyens de nous contacter selon votre préférence.",
+    "map_title": "Notre localisation",
+    "phone_text": "+225 01 23 45 67 89",
+    "phone_sentence": "Vous pouvez aussi nous contacter directement par téléphone au",
+    "labels": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "hours": "Horaires"
+    },
+    "descriptions": {
+      "phone": "Appelez-nous pour un conseil immédiat",
+      "email": "Écrivez-nous, nous répondons sous 24h",
+      "address": "Côte d'Ivoire",
+      "hours": "Support d'urgence 24/7"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Intervenez-vous dans toute l'Afrique ?",
+      "a1": "Basés en Côte d'Ivoire, nous intervenons dans plusieurs pays d'Afrique de l'Ouest et proposons des solutions à distance pour le reste du continent.",
+      "q2": "Quel est votre délai d'intervention ?",
+      "a2": "Pour les urgences, nous intervenons sous 24h. Pour les projets planifiés, nous nous adaptons à vos contraintes et délais.",
+      "q3": "Proposez-vous des contrats de maintenance ?",
+      "a3": "Oui, nous proposons différents contrats de maintenance adaptés à la taille et aux besoins de votre entreprise."
+    },
+    "errors": {
+      "required": "Tous les champs sont requis",
+      "invalid_email": "Veuillez saisir une adresse email valide",
+      "network": "Problème de connexion. Vérifiez votre connexion internet et réessayez.",
+      "not_logged_in": "Vous devez être connecté pour envoyer un message. Veuillez vous connecter et réessayer.",
+      "server_config": "Erreur de configuration du serveur. Contactez l'administrateur.",
+      "unknown": "Erreur lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone."
+    }
+  },
+  "section_about": {
+    "title1": "À Savoir sur",
+    "title2": "IT-EXPERTS-4-AFRICA",
+    "description": "IT-EXPERTS-4-AFRICA une entreprise spécialisée dans le conseil et l'implémentation des solutions IT, couvrant les infrastructures informatiques, le cloud, la cybersécurité et les réseaux. Notre marque repose sur l'expertise, l'innovation et une approche axée sur le client pour optimiser les technologies des entreprises et favoriser leur croissance en Afrique.",
+    "learn_more_button": "En savoir plus",
+    "our_services_button": "Nos services",
+    "team_title": "Notre Équipe d'Experts",
+    "team_description": "Professionnels certifiés dédiés à votre réussite numérique"
+  },
+  "service_details": {
+    "ingenierie-design": {
+      "label": "Ingénierie / Design",
+      "description": "Nous concevons des architectures réseau et IT adaptées à vos besoins métiers, alliant performance, sécurité et évolutivité.",
+      "details": [
+        "Études d’architecture HLD (High Level Design) et LLD (Low Level Design)",
+        "Schémas de topologie réseau (LAN, WAN, Datacenter, Cloud, SD-WAN)",
+        "Dimensionnement des infrastructures (serveurs, stockage, virtualisation)",
+        "Intégration des contraintes de cybersécurité (segmentation, firewalling, zero trust)",
+        "Conception de plans de continuité et de reprise d’activité (PCA/PRA)"
+      ]
+    },
+    "implementation": {
+      "label": "Implémentation",
+      "description": "Nous assurons le déploiement et l’intégration de solutions technologiques avec des standards de qualité élevés.",
+      "details": [
+        "Installation et configuration d’équipements réseau et sécurité (switches, routeurs, firewalls, WiFi, WLC)",
+        "Intégration Datacenter (serveurs, hyperviseurs, stockage SAN/NAS, HCI, OpenStack/Kubernetes)",
+        "Migration d’infrastructures (LAN, WAN, Cloud, VoIP, collaboration)",
+        "Déploiement de solutions de sécurité (antivirus, EDR, IAM, VPN, MFA)",
+        "Tests de performance, validation et mise en production"
+      ]
+    },
+    "etudes": {
+      "label": "Études",
+      "description": "Nous réalisons des études stratégiques et techniques pour orienter vos décisions et optimiser vos investissements.",
+      "details": [
+        "Études de faisabilité (technique, économique, réglementaire)",
+        "Benchmark technologique et comparaison de solutions (Cisco, Huawei, Fortinet, etc.)",
+        "Capacity planning et anticipation de croissance",
+        "Analyse de ROI/TCO (Return on Investment / Total Cost of Ownership)",
+        "Études de migration (Cloud, IP/MPLS, SD-WAN, IPv6, etc.)"
+      ]
+    },
+    "audit-amoa": {
+      "label": "Audit / AMOA",
+      "description": "Nous vous accompagnons dans vos projets de transformation numérique avec un regard indépendant.",
+      "details": [
+        "Audit technique (réseau, sécurité, systèmes, cloud, applicatif)",
+        "Audit organisationnel (processus ITIL, gouvernance IT)",
+        "Rédaction de cahiers des charges et dossiers d’appel d’offres",
+        "Définition de la stratégie de sourcing (choix éditeurs/intégrateurs)",
+        "Suivi des fournisseurs et validation des livrables",
+        "Assistance aux tests d’acceptation et recette (UAT, FAT, SAT)"
+      ]
+    },
+    "gestion-projets": {
+      "label": "Gestion de Projets",
+      "description": "Nous pilotons vos projets IT et télécoms avec méthode et transparence.",
+      "details": [
+        "Méthodologies de gestion (PMI, Prince2, Agile, Scrum)",
+        "Élaboration de planning, budgets et RACI",
+        "Gestion des risques et suivi qualité",
+        "Coordination multi-équipes (internes, partenaires, éditeurs)",
+        "Reporting exécutif et communication projet",
+        "Conduite du changement et accompagnement utilisateurs"
+      ]
+    },
+    "support-exploitation": {
+      "label": "Support et Exploitation",
+      "description": "Nous assurons la disponibilité et la performance de vos systèmes 24/7.",
+      "details": [
+        "Supervision proactive (NOC/SOC, monitoring 24/7, alerting)",
+        "Maintenance préventive et corrective",
+        "Gestion des incidents et des problèmes (ITIL)",
+        "Patching et mises à jour régulières",
+        "Services managés (Managed Firewall, Managed LAN, Managed Cloud)",
+        "Optimisation continue des performances (capacity management, tuning)"
+      ]
+    },
+    "formation-it": {
+      "label": "Formation IT",
+      "description": "Nous renforçons les compétences de vos équipes techniques et utilisateurs.",
+      "details": [
+        "Formations réseaux et sécurité (Cisco CCNA/CCNP, Fortinet, Palo Alto)",
+        "Formations systèmes et cloud (Linux, Windows Server, VMware, OpenStack, AWS, Azure)",
+        "Formations DevOps et conteneurs (Docker, Kubernetes, CI/CD)",
+        "Formation cybersécurité (SOC analyst, ITIL security, bonnes pratiques utilisateurs)",
+        "Ateliers pratiques et labs personnalisés"
+      ]
+    },
+    "developpement-applications": {
+      "label": "Développement d’applications",
+      "description": "Nous développons des solutions logicielles et mobiles adaptées à vos métiers.",
+      "details": [
+        "Développement d’applications web et mobiles (Android/iOS)",
+        "Développement sur mesure (ERP, CRM, portail client, API)",
+        "Intégration avec les systèmes existants (bases de données, middleware, API REST/SOAP)",
+        "UX/UI design et prototypage",
+        "Tests et assurance qualité (QA, UAT, automatisation)",
+        "Maintenance évolutive et corrective des applications"
+      ]
+    }
+  },
+  "service_details_buttons": {
+    "back_to_services": "← Retour aux services",
+    "learn_more": "En savoir Plus"
+  },
+  "footer": {
+    "companyName": "IT-Experts-4-Africa",
+    "description": "Nous transformons vos idées en solutions numériques innovantes. Notre équipe d'experts est dédiée à votre réussite.",
+    "sections": [
+      {
+        "title": "Navigation",
+        "links": [
+          { "label": "Accueil", "href": "/" },
+          { "label": "Services", "href": "/services" },
+          { "label": "À propos", "href": "/about" },
+          { "label": "Contact", "href": "/contact" }
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          { "label": "Tous les services", "href": "/services" },
+          { "label": "Ingénierie / Design", "href": "/services/ingenierie-design" },
+          { "label": "Implémentation", "href": "/services/implementation" },
+          { "label": "Études", "href": "/services/etudes" },
+          { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
+          { "label": "Gestion de Projets", "href": "/services/gestion-projets" },
+          { "label": "Support et Exploitation", "href": "/services/support-exploitation" },
+          { "label": "Formation IT", "href": "/services/formation-it" },
+          { "label": "Développement d’applications", "href": "/services/developpement-applications" }
+        ]
+      }
+    ],
+    "contact_title": "Contact",
+    "contactInfo": [
+      { "label": "Email", "value": "info@itexperts4africa.com.com", "icon": "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
+      { "label": "Téléphone", "value": "+225 0748290303", "icon": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" },
+      { "label": "Adresse", "value": "Abidjan, riviera", "icon": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" }
+    ],
+    "copyrightText": "© %YEAR% IT-EXPERTS-4-AFRICA. Tous droits réservés.",
+    "legalLinks": [
+      { "label": "Conditions d'utilisation", "href": "#" },
+      { "label": "Politique de confidentialité", "href": "#" },
+      { "label": "Politique de cookies", "href": "#" }
+    ],
+    "newsletter": {
+      "title": "Newsletter",
+      "placeholder": "Votre email",
+      "buttonText": "S'inscrire",
+      "description": "Recevez nos dernières actualités et offres spéciales"
+    }
+  },
+  "hero": {
+    "title1": "It Experts",
+    "title2": "4 Africa",
+    "description": "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.\n\nChez IT Experts 4 Africa, nous aidons les PME comme les grandes organisations à transformer leur système d’information en un véritable levier de performance.\nDe l’architecture réseau à la cybersécurité, en passant par la gestion et l’optimisation des infrastructures, nous concevons et opérons des solutions fiables et évolutives, au service de vos enjeux métiers.",
+    "learn_more_button": "En savoir plus",
+    "our_services_button": "Nos services",
+    "satisfied_clients": "clients satisfaits",
+    "projects_completed": "projets réalisés"
+  }
+}

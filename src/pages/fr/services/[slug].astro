@@ -1,0 +1,83 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { CheckCircle2 } from "lucide-react";
+import { Settings, Shield, Cloud, Search, ClipboardCheck, Users, BookOpen, Code } from "lucide-react";
+import GlowButton from "@/components/react/UI/components/GlowButton";
+import fr from "@/locales/fr.json";
+import en from "@/locales/en.json";
+import serviceIcons from "@/contents/servicesData";
+
+const currentLocale = 'fr';
+const content = { fr, en };
+const t = content[currentLocale as keyof typeof content] || content.fr;
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: "ingenierie-design" }, props: { locale: 'fr' }},
+    { params: { slug: "implementation" }, props: { locale: 'fr' }},
+    { params: { slug: "etudes" }, props: { locale: 'fr' }},
+    { params: { slug: "audit-amoa" }, props: { locale: 'fr' }},
+    { params: { slug: "gestion-projets" }, props: { locale: 'fr' }},
+    { params: { slug: "support-exploitation" }, props: { locale: 'fr' }},
+    { params: { slug: "formation-it" }, props: { locale: 'fr' }},
+    { params: { slug: "developpement-applications" }, props: { locale: 'fr' }},
+    { params: { slug: "ingenierie-design" }, props: { locale: 'en' }},
+    { params: { slug: "implementation" }, props: { locale: 'en' }},
+    { params: { slug: "etudes" }, props: { locale: 'en' }},
+    { params: { slug: "audit-amoa" }, props: { locale: 'en' }},
+    { params: { slug: "gestion-projets" }, props: { locale: 'en' }},
+    { params: { slug: "support-exploitation" }, props: { locale: 'en' }},
+    { params: { slug: "formation-it" }, props: { locale: 'en' }},
+    { params: { slug: "developpement-applications" }, props: { locale: 'en' }},
+
+  ];
+}
+
+
+const { slug } = Astro.params;
+const serviceText = t.service_details[slug as keyof typeof t.service_details];
+const serviceIcon = serviceIcons.find(s => s.slug === slug);
+const iconsMap = {
+  "ingenierie-design": Settings,
+  "implementation": Shield,
+  "etudes": Cloud,
+  "audit-amoa": Search,
+  "gestion-projets": ClipboardCheck,
+  "support-exploitation": Users,
+  "formation-it": BookOpen,
+  "developpement-applications": Code,
+};
+const Icon = iconsMap[slug as keyof typeof iconsMap];
+
+if (!serviceText || !serviceIcon) {
+  throw new Error(`Service introuvable: ${slug}`);
+}
+---
+
+<Layout langPath={currentLocale}>
+  <section class="w-full  flex flex-col flex-wrap justify-center px-4 py-40 md:py-50 md:px-20    text-sm md:text-xl space-y-3">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="bg-it4a-secondary p-4  rounded-2xl border-2 border-it4a-primary shadow-md shadow-amber-50">
+        <Icon  className="w-10 h-10 text-it4a-primary " />
+      </div>
+      <h1 class="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange">{serviceText.label}</h1>
+    </div>
+
+    <p class="text-gray-100 text-lg mb-8">{serviceText.description}</p>
+
+    <ul class="space-y-3">
+      {serviceText.details.map(item => (
+          <li class="flex items-start gap-3 backdrop-blur-lg backdrop-brightness-50 bg-it4a-secondary/20  p-4 rounded-xl border-1 border-it4a-primary shadow-2xs shadow-white">
+            <span class="text-it4a-primary ">
+              <CheckCircle2/>
+            </span>
+            <span class="text-gray-100">{item}</span>
+          </li>
+      ))}
+    </ul>
+    <div class="flex flex-col flex-1/2 w-full md:max-w-2xl   md:flex-row flex-wrap md:gap-5  gap-2 text-xs md:text-sm ">
+      <GlowButton lg={currentLocale} client:only  className="flex-1"  href="/services"   variant="outline">  {t.service_details_buttons.back_to_services} </GlowButton>
+      <GlowButton lg={currentLocale} client:only  className="flex-1"  href="/contact " >  {t.service_details_buttons.learn_more} </GlowButton>
+    </div>
+  </section>
+</Layout>

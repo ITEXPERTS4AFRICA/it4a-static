@@ -1,0 +1,526 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import {
+  Target,
+  Eye,
+  Users,
+  Award,
+  MapPin,
+  ClockFading,
+  Trophy,
+} from "lucide-react";
+
+import ScrollReveal from "@/components/react/UI/Animation/ScrollReveal";
+import CountUp from "@/components/react/UI/Text/CountUp";
+import LightCommunicationBackground from "@/components/react/UI/Animation/LightCommunicationBackground";
+import DecryptedText from "@/components/react/UI/Text/DecryptedText";
+
+import { ImgAbout } from "@/assets/assets";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
+import TitleDescript from "@/components/react/UI/components/TitleDescript";
+import { Profile1, Profile2, Profile3, Profile4 } from "@/assets/assets";
+import TransitionSVGSection from "@/components/react/UI/components/TransitionSVGSection";
+
+// const teamMembers: ChromaItem[] = [
+//   {
+//     image: Profile1,
+//     title: " Marthe Django",
+//     subtitle: "RH",
+//   },
+//   {
+//     image: Profile2,
+//     title: "Louis Koffi",
+//     subtitle: "PDG",
+//   },
+//   {
+//     image: Profile3,
+//     title: "Prince ATOBBLA",
+//     subtitle: "DG",
+//   },
+//   {
+//     image: Profile4,
+//     title: "Janne Goly",
+//     subtitle: "Ingenieur Informatique",
+//   },
+// ];
+
+// {
+//   icon: ClockFading,
+//   title: "4+ Années",
+//   description: "D'expertise dans le domaine IT",
+//   count: 4,
+// },
+const achievements = [
+  {
+    icon: Trophy,
+    title: "20+ Projets",
+    description: "Projets IT réalisés avec succès",
+    count: 35,
+  },
+  {
+    icon: Users,
+    title: "18+ Clients",
+    description: "Entreprises nous font confiance",
+    count: 18,
+  },
+  {
+    icon: Award,
+    title: "Certifications",
+    description: "Partenaire agréé des grandes marques",
+    count: 10,
+  },
+];
+
+const addValueCompany = [
+  {
+    title: "Excellence",
+    description:
+      "Offrir un niveau de qualité irréprochable grâce à des ingénieurs certifiés et expérimentés (10 à 20 ans d’expérience chez des constructeurs de renommée mondiale).",
+  },
+  {
+    title: "Innovation",
+    description:
+      "Intégrer en continu les dernières technologies (cloud, cybersécurité, réseaux intelligents, applications) pour anticiper les besoins futurs.",
+  },
+  {
+    title: "Engagement",
+    description:
+      "Placer la satisfaction client au centre, avec une culture de la rigueur, du respect des délais et de la performance durable.",
+  },
+  {
+    title: "Intégrité",
+    description:
+      "Agir avec transparence et fiabilité dans toutes nos collaborations.",
+  },
+  {
+    title: "Impact local",
+    description:
+      "Développer des solutions sur mesure adaptées aux réalités africaines, pour contribuer au développement économique et technologique du continent.",
+  },
+];
+const currentLocale = 'fr';
+---
+
+<Layout title="IT-EXPERTS-4-AFRICA | À propos de nous" langPath={currentLocale}>
+  <div
+    class="bg-gradient-to-br w-full text-white backdrop-blur-xs overflow-hidden import logo from text-sm md:text-lg"
+  >
+    {/* Hero Section */}
+    <LightCommunicationBackground
+      
+      className="absolute inset-0 -z-10"
+      client:load
+    >
+      <section
+        class="relative bg-gradient-to-br backdrop-blur-xs from-transparent via-black/50 to-it4a-primary/50 pt-50 p-10"
+      >
+        <div
+          class="w-full mx-auto px-2 md:px-4 relative flex items-center flex-col md:gap-7 gap-2 text-sm md:text-lg"
+        >
+          <ScrollReveal client:only>
+            <div class="text-center">
+              <motion.h1
+                className="text-3xl md:text-5xl font-bold text-gray-100 mb-6"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                client:only
+              >
+                <DecryptedText
+                  speed={20}
+                  animateOn="view"
+                  text="À propos de"
+                  client:load
+                />
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange"
+                >
+                 IT Experts 4 Africa
+                </span>
+              </motion.h1>
+              <motion.p
+                className=" text-gray-200 max-w-3xl mx-auto leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                client:only
+              >
+                <DecryptedText
+                  speed={100}
+                  useOriginalCharsOnly={true}
+                  animateOn="view"
+                  text="Spécialisée dans les services réseaux et infrastructures IT, nous accompagnons les entreprises africaines vers l'excellence technologique."
+                  client:load
+                />
+              </motion.p>
+            </div>
+          </ScrollReveal>
+          <div class="grid lg:grid-cols-1 gap-5 items-center">
+            <ScrollReveal direction="left" client:only>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                client:only
+              >
+                <img
+                  src={ImgAbout}
+                  alt="Modern office with IT equipment"
+                  class="rounded-2xl shadow-2xl w-full h-40 md:h-96 object-cover"
+                />
+              </motion.div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={0.2} client:only>
+              <div class="flex flex-col gap-1 text-sm/20">
+                <motion.div
+                  className="flex items-center space-x-3"
+                  whileHover={{ x: 10 }}
+                  transition={{ duration: 0.3 }}
+                  client:only
+                >
+                  <MapPin className="h-6 w-6 text-it4a-primary" />
+                  <span class="text-2xl md:text-lg text-gray-100"
+                    >Basé à Abidjan, Cocody</span
+                  >
+                </motion.div>
+                <motion.p
+                  className="md:text-lg text-gray-200 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Fondée en 2022, IT Experts 4 Africa cumule déjà 3 années
+                  d’expérience concrète aux côtés de ses clients, avec une
+                  ambition claire : démocratiser l’accès aux technologies IT de
+                  pointe sur le continent africain.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg text-gray-200 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Notre force repose sur une équipe d’experts aguerris, capables
+                  d’intervenir sur les projets les plus complexes : DataCenter,
+                  Cloud, réseaux, communications unifiées, cybersécurité et
+                  développement d’applications.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg text-gray-200 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Au cœur de notre valeur ajoutée :
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Des ingénieurs seniors disposant de 10 à 20 années
+                  d’expérience, qui ont bâti leur expertise auprès de
+                  constructeurs de renommée mondiale tels que Huawei, Nokia,
+                  Cisco, tout en s’ouvrant à un large éventail de technologies
+                  d’infrastructures (Cloud, serveurs, stockage, virtualisation,
+                  sécurité).
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Une vision à 360° alliant maîtrise technique et compréhension
+                  des enjeux métiers, pour transformer chaque projet IT en
+                  levier de performance et de compétitivité.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Une méthodologie éprouvée qui nous permet d’identifier le
+                  meilleur plan d’action face à vos défis business, et de livrer
+                  des solutions robustes, évolutives et parfaitement maîtrisées
+                  par vos équipes.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Notre ambition est de devenir un acteur de référence en
+                  Afrique dans les domaines des réseaux, du cloud, de la
+                  cybersécurité et de la gestion de projets, en proposant des
+                  solutions sur mesure, durables et adaptées aux réalités
+                  locales.
+                </motion.p>
+              </div>
+              <motion.p
+                className="md:text-lg  leading-relaxed"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+                client:only
+              >
+                Chez IT Experts 4 Africa, nous croyons que l’alliance d’une
+                expertise technique de haut niveau et d’une connaissance fine
+                des enjeux business africains est la clé pour transformer vos
+                ambitions en réussites concrètes.
+              </motion.p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+    </LightCommunicationBackground>
+
+    {/* Mission & Vision */}
+    <section class="py-20 bg-transparent relative">
+      <TransitionSVGSection />
+      <BackgroundBeams
+        className="h-full -z-20 bg-it4a-secondary text-it4a-primary"
+        client:only
+      />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm">
+        <div class="grid md:grid-cols-2 gap-12">
+          <ScrollReveal direction="left" client:only>
+            <motion.div
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+              client:only
+            >
+              <Card
+                className="bg-gray-700/20 border-1 border-gray-50/20 shadow-2xl  rounded-3xl p-8 backdrop-blur-md h-full"
+              >
+                <CardContent className="p-4 ">
+                  <div class="flex items-center gap-5">
+                    <motion.div
+                      className=" w-8 md:w-16 h-8 md:h-16 bg-it4a-secondary rounded-full flex items-center justify-center  text-it4a-primary "
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      client:only
+                    >
+                      <Target className="h-4 w-4 md:h-8 md:w-8 " />
+                    </motion.div>
+                    <h2
+                      class="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange text-xl md:text-3xl"
+                    >
+                      Mission
+                    </h2>
+                  </div>
+                  <p class="text-gray-100 leading-relaxed">
+                    Nous accompagnons nos clients dans toutes les étapes de leur transformation numérique — de la conception à l’implémentation, de l’audit au support continu — afin de leur offrir des infrastructures robustes, sécurisées et évolutives, parfaitement adaptées à leur
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </ScrollReveal>
+          <ScrollReveal direction="right" delay={0.2} client:only>
+            <motion.div
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.3 }}
+              client:only
+            >
+              <Card
+                className="bg-gray-700/20 border-1 border-gray-50/20 shadow-2xl  rounded-3xl p-8 backdrop-blur-md h-full"
+              >
+                <CardContent className="p-4 ">
+                  <div class="flex items-center gap-5">
+                    <motion.div
+                      className=" w-8 md:w-16 h-8 md:h-16 bg-it4a-secondary rounded-full flex items-center justify-center  text-it4a-primary "
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      client:only
+                    >
+                      <Eye className="h-4 w-4 md:h-8 md:w-8 " />
+                    </motion.div>
+                    <h2
+                      class="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange text-xl md:text-3xl"
+                    >
+                      Vision
+                    </h2>
+                  </div>
+                  <p class="text-gray-100 leading-relaxed">
+                   Devenir l’acteur de référence en Afrique pour les solutions IT et télécoms de nouvelle génération, en démocratisant l’accès aux technologies de pointe et en faisant du numérique un véritable levier de croissance et de compétitivité pour les entreprises et les institutions du continent.
+
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+
+    {/* Achievements */}
+    <section
+      id="#projet"
+      class="py-20 text-white backdrop-blur-xl bg-gradient-to-r from-it4a-primary/50 via-it4a-secondary/90 to-it4a-secondary"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal client:only>
+          <div class="text-center mb-16">
+            <TitleDescript
+              title="Nos réalisations"
+              title2="en chiffres"
+              descript="Des résultats concrets qui témoignent de notre expertise"
+              client:only
+            />
+          </div>
+        </ScrollReveal>
+
+        <div class="grid items-center lg:grid-cols-3 gap-8">
+          {
+            achievements.map((achievement, index) => (
+              <ScrollReveal delay={index * 0.1} direction="up" client:only>
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  client:only
+                 
+                >
+                  <Card className="bg-transparent border-1 border-gray-300 backdrop-blur-md shadow-lg text-center hover:shadow-xl transition-all duration-300 h-full">
+                    <CardContent className="p-8">
+                      <motion.div
+                        className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center bg-gray-600/20 border-1 border-gray-100 text-it4a-primary`}
+                        whileHover={{ rotate: 360, scale: 1.1 }}
+                        transition={{ duration: 0.6 }}
+                        client:only
+                      >
+                        <achievement.icon className="md:h-8 md:w-8" />
+                      </motion.div>
+                      <h3 class="text-2xl font-bold text-gray-100 mb-2">
+                        <CountUp
+                          to={achievement.count}
+                          duration={2}
+                          client:only
+                        />
+                      </h3>
+                      <p class="text-gray-300">{achievement.description} </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </ScrollReveal>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* Team Section */}
+    <!-- <section id="#teams" class="py-20 bg-transparent relative">
+      <TransitionSVGSection />
+      <BackgroundBeams
+        className="h-full -z-20 bg-it4a-secondary text-it4a-primary"
+        client:only
+      />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal client:only>
+          <div class="text-center mb-16">
+            <TitleDescript
+              title="Notre équipe d'experts"
+              descript="Des professionnels passionnés au service de votre réussite"
+              client:load
+            />
+          </div>
+        </ScrollReveal>
+        <div
+          class="container flex flex-col itmes-center justify-center gap-1 max-w-7xl mx-auto"
+        >
+          <ChromaGrid
+            items={teamMembers}
+            className="bg-transparent backdrop-blur-xs p-4 rounded-2xl place-items-center font-Poppins"
+            client:load
+          />
+        </div>
+      </div>
+    </section> -->
+
+    {/* Values Section */}
+    <section
+      class="py-20 bg-gradient-to-r from-it4a-primary/40 via-black/40 to-it4a-orange relative overflow-hidden"
+    >
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full opacity-10"
+        animate={{
+          backgroundPosition: ["0% 0%", "100% 100%"],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+   
+        client:only
+      />
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <ScrollReveal client:only>
+          <motion.h2
+            className="text-2xl md:text-3xl font-bold text-gray-100 mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            client:only
+          >
+            <DecryptedText
+              speed={20}
+              animateOn="view"
+              text="Nos valeurs"
+              client:load
+            />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange"
+            >
+            fondamentales
+            </span>
+          </motion.h2>
+
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            {
+              addValueCompany.map((value, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center md:text-left"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  client:only
+                >
+                  <h3 class=" text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange  mb-3">
+                    {value.title}
+                  </h3>
+                  <p class="text-blue-100">{value.description}</p>
+                </motion.div>
+              ))
+            }
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  </div>
+</Layout>

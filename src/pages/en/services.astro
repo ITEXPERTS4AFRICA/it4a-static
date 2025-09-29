@@ -1,0 +1,243 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import {
+  Shield,
+  Cloud,
+  CheckCircle,
+  ArrowRight,
+  ClipboardCheck,
+  Settings,
+  Search,
+  Users,
+  BookOpen,
+  Code,
+} from "lucide-react";
+
+import DecryptedText from "@/components/react/UI/Text/DecryptedText";
+import LightCommunicationBackground from "@/components/react/UI/Animation/LightCommunicationBackground";
+import en from '@/locales/en.json';
+import fr from '@/locales/fr.json';
+const content = { fr, en };
+const currentLocale = 'en';
+const t = content[currentLocale as keyof typeof content] || content.en;
+import ScrollReveal from "@/components/react/UI/Animation/ScrollReveal";
+import GlowButton from "@/components/react/UI/components/GlowButton";
+import TransitionSVGSection from "@/components/react/UI/components/TransitionSVGSection";
+import ImgCpInt from "/image/services/Gemini_Generated_Image_pqpdlfpqpdlfpqpd.webp?url";
+import ImgAuditSecurity from "/image/services/Gemini_Generated_Image_axxjxoaxxjxoaxxj.webp?url";
+import ImgMainTISupportIT from "/image/services/Gemini_Generated_Image_1zrni41zrni41zrn.webp?url";
+import ImgVitualServices from "/image/services/Gemini_Generated_Image_pkncnpkncnpkncnp.webp?url";
+import ImgFormaServices from "/image/services/Gemini_Generated_Image_h42iv6h42iv6h42i.webp?url";
+import ImgDevServices from "/image/services/Gemini_Generated_Image_gxayblgxayblgxay.webp?url";
+import ImgEtudeIngenierie from "/image/services/Gemini_Generated_Image_digg48digg48digg.webp?url";
+import ImgGestionProjets from "/image/services/Gemini_Generated_Image_y5vgcmy5vgcmy5vg.webp?url";
+import TitleDescript from "@/components/react/UI/components/TitleDescript";
+import { BackgroundBeams } from "@/components/uiAceternity/UI/Background/BackgroundBeams";
+import { ServicesComplementaire } from "@/components/uiAceternity/UI/componentlist";
+import { motion } from "framer-motion";
+
+const serviceDefs = [
+  { slug: 'ingenierie-design', img: ImgCpInt, icon: Settings, color: 'from-blue-500 to-blue-600' },
+  { slug: 'implementation', img: ImgAuditSecurity, icon: Shield, color: 'from-green-500 to-green-600' },
+  { slug: 'etudes', img: ImgMainTISupportIT, icon: Cloud, color: 'from-purple-500 to-purple-600' },
+  { slug: 'audit-amoa', img: ImgVitualServices, icon: Search, color: 'from-indigo-500 to-indigo-600' },
+  { slug: 'gestion-projets', img: ImgGestionProjets, icon: ClipboardCheck, color: 'from-red-500 to-red-600' },
+  { slug: 'support-exploitation', img: ImgEtudeIngenierie, icon: Users, color: 'from-orange-500 to-orange-600' },
+  { slug: 'formation-it', img: ImgFormaServices, icon: BookOpen, color: 'from-green-500 to-blue-700' },
+  { slug: 'developpement-applications', img: ImgDevServices, icon: Code, color: 'from-pink-500 to-pink-600' },
+];
+
+const services = serviceDefs.map(s => ({
+  img: s.img,
+  icon: s.icon,
+  title: t.service_details[s.slug as keyof typeof t.service_details].label,
+  description: t.service_details[s.slug as keyof typeof t.service_details].description,
+  features: t.service_details[s.slug as keyof typeof t.service_details].details,
+  color: s.color,
+}));
+
+---
+
+<Layout title={`IT4A | ${t.services_section.title1}`} langPath={currentLocale}>
+  <div class="w-full  mx-auto">
+    <!-- Hero Section  -->
+    <LightCommunicationBackground
+      className="absolute inset-0 -z-10 w-full"
+      client:load
+    >
+      <section
+        class="relative flex items-center justify-center bg-gradient-to-br backdrop-blur-xs from-transparent via-black/50 to-it4a-primary/50 py-10 pt-20 lg:py-32 text-sm md:text-lg"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center ">
+            <motion.h1
+              className="text-3xl md:text-5xl pt-20 md:pt-40 lg:text-5xl font-bold text-gray-100 mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              client:only
+            >
+              <DecryptedText
+                speed={20}
+                animateOn="view"
+                text="Our Services"
+                client:load
+              />
+              <span
+                class="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-orange text-xs md:text-3xl"
+              >
+                <DecryptedText
+                  animateOn="view"
+                  speed={10}
+                  text="IT Experts"
+                  client:load
+                />
+              </span>
+            </motion.h1>
+            <motion.p
+              className="text-xs md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              client:only
+            >
+              <DecryptedText
+                speed={100}
+                useOriginalCharsOnly={true}
+                animateOn="view"
+                text="Comprehensive solutions to transform and optimize your IT infrastructure"
+                client:load
+              />
+            </motion.p>
+          </div>
+        </div>
+      </section>
+    </LightCommunicationBackground>
+
+    <!-- Main Services  -->
+    <section class="py-20 backdrop-blur-xs bg-gray-60/50 relative">
+      <TransitionSVGSection />
+      <div class="max-w-7xl flex justify-center itemes-center px-4 sm:px-6 lg:px-8 relative">
+        <div class=" space-y-10 container mx-auto md:space-y-20">
+          {
+            services.map((service, index) => (
+              <ScrollReveal
+                direction={index % 2 === 1 ? "right" : "left"}
+                client:load
+              >
+                <div
+                  class={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10  items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                >
+                  <div class={index % 2 === 1 ? "md:col-start-2 lg:col-start-2" : ""}>
+                    <div class="bg-gray-700/20 border-1 border-gray-50/20 shadow-2xl rounded-3xl p-6 md:p-8 backdrop-blur-md">
+                      <div class="flex items-center gap-10 mb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary">
+                        <div class="flex items-center gap-3">
+                          <div
+                            class={` rounded-full flex items-center justify-center text-it4a-primary w-10 h-10 md:w-12 md:h-12`}
+                          >
+                            <service.icon className="w-6 h-6 md:w-8 md:h-8" />
+                          </div>
+                          <div class="text-lg md:text-2xl lg:text-3xl">
+                          <DecryptedText
+                            text={service.title}
+                            speed={100}
+                            useOriginalCharsOnly={true}
+                            animateOn="view"
+                          />
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-sm md:text-base lg:text-lg text-gray-200 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div>
+                        {service.features.map((feature) => (
+                          <ScrollReveal client:load>
+                            <div class="flex text-it4a-primary items-center gap-3 py-1">
+                              <CheckCircle className="h-4 w-4 md:h-5 md:w-5" />
+                              <span class="text-gray-100 text-sm md:text-base">{feature}</span>
+                            </div>
+                          </ScrollReveal>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div class={index % 2 === 1 ? "md:col-start-1 lg:col-start-1" : ""}>
+                    <div class="relative">
+                      <div
+                        class={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl transform ${index % 2 === 0 ? "rotate-3" : "-rotate-3"}`}
+                      />
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        class="relative rounded-3xl shadow-2xl w-full h-48 md:h-64 lg:h-80 object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Services  -->
+    <section class="py-20 relative">
+      <BackgroundBeams
+        className="h-full -z-20  bg-gradient-to-tr from-it4a-secondary to-black text-it4a-primary"
+        client:only
+      />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <TitleDescript
+            title="Additional"
+            title2="Services"
+            descript="A broad range of solutions to address all your IT needs"
+            client:load
+          />
+        </div>
+        <ScrollReveal client:only>
+          <div class="flex ">
+            <ServicesComplementaire className="flex w-full" client:load />
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+
+    <!-- CTA Section  -->
+    <LightCommunicationBackground className="z-0" client:load>
+      <section
+        class="py-20 backdrop-blur-xs bg-gradient-to-r from-it4a-primary/50 via-it4a-secondary/90 to-it4a-secondary"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col gap-5 ">
+          <TitleDescript
+            title="Looking for an IT Solution?"
+            title2="Tailored for You"
+            descript="Our experts assess your needs and recommend the most suitable solution for your business and budget."
+            client:load
+          />
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <GlowButton
+              href="/contact"
+              className="text-center text-white"
+              variant="outline"
+              client:only
+            >
+              Contact Us
+              <ArrowRight />
+            </GlowButton>
+            <GlowButton
+              href="/about"
+              className=" text-center text-white"
+              variant="primary"
+              client:only
+            >
+              Learn More
+            </GlowButton>
+          </div>
+        </div>
+      </section>
+    </LightCommunicationBackground>
+  </div>
+</Layout>
