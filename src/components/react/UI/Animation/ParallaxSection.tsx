@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 type ParallaxSectionType = {
     children: React.ReactNode,
     speed: number,
-    className:String,
+    className:string,
 }
 
 
-export default function ParallaxSection({ children , speed = 0.5, className = '' }){
+export default function ParallaxSection ({ children , speed = 0.5, className = '' } : ParallaxSectionType){
   const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {

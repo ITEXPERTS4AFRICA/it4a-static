@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import frFlag from "/image/lang/france_flag.webp?url";
 import enFlag from "/image/lang/usa_flag.webp?url";
 

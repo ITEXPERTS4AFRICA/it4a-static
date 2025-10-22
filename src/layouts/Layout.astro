@@ -9,9 +9,9 @@ import Analytics from "@vercel/analytics/astro";
 import ScrollArrow from "@/components/react/UI/components/ScrollArrow";
 import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import fr from "@/locales/fr.json";
-import en from "@/locales/en.json";
-import { fade } from 'astro:transitions';
+import fr from "@/locales/fr.json" ;
+import en from "@/locales/en.json" ;
+import type { loadTSConfig } from "node_modules/astro/dist/core/config/tsconfig";
 
 export interface Props {
   langPath?:string;
@@ -25,9 +25,8 @@ const {
   description = "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.",
   langPath = currentLocale } = Astro.props;
 
-
 const content = { fr, en };
-const t = content[currentLocale as keyof typeof content] || content.fr;
+const ts = content[currentLocale as keyof typeof content] || content.fr;
 ---
 
 <!doctype html>
@@ -48,14 +47,17 @@ const t = content[currentLocale as keyof typeof content] || content.fr;
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="http://itexperts4africa.com.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="IT-EXPERTS-4-AFRICA" />
+    <meta property="og:type" content="web-app" />
+    <meta property="og:title" content="itexperts4africa" />
     <meta property="og:image" content="https://ogcdn.net/c64a2e45-24fd-4359-a429-c7a45a78fbe8/v1/itexperts4africa/IT%20Experts%0A4%20Africa/Boostez%20la%20performance%20de%20votre%20entreprise%20gr%C3%A2ce%20%C3%A0%20des%20solutions%20r%C3%A9seau%20sur%20mesure.Nous%20accompagnons%20les%20PME%20et%20grandes%20structures%20dans%20l%E2%80%99installation%2C%20la%20gestion%20et%20la%20s%C3%A9curisation%20de%20leurs%20infrastructures%20informatiques./https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F4df55c30-02c4-4373-b5ad-180323229784.png%3Ftoken%3DtN6JC1VT6-frjkv4BDRmjdcWTfJVFOpsfqQNwBJSDH0%26height%3D415%26width%3D805%26expires%3D33289208197/og.png" />
-
-    <!-- HTML Meta Tags -->
+    <meta property="og:favicon" content="/favicon/faviconLight/favicon.io" />
+    <meta property="og:site_name" content="itexperts4africa.com"/>
+    
+    <meta name="keywords" content="IT Experts Afrique, informatique Afrique, recrutement IT, solutions informatiques, technologie Afrique, experts IT, digital Afrique">    <!-- HTML Meta Tags -->
+    
     <meta
       name="description"
-      content={`${t.descriptionHeader}`}
+      content={`${ts.descriptionHeader}`}
       property="og:type"
       content="website"
     />
@@ -71,9 +73,9 @@ const t = content[currentLocale as keyof typeof content] || content.fr;
     <link
       rel="icon"
       type="image/png"
-      href="/favicon/faviconLight/favicon-96x96.png"
+      href="/favicon/faviconLight/favicon.ico"
     />
-    <link rel="shortcut icon" href="/favicon/faviconLight/favicon-96x96.png" />
+    <link rel="shortcut icon" href="/favicon/faviconLight/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -83,17 +85,17 @@ const t = content[currentLocale as keyof typeof content] || content.fr;
     <link rel="manifest" href="/favicon/faviconLight/site.webmanifest" />
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="itexperts4africa.com.com" />
+    <meta name="twitter:card" content="https://ogcdn.net/c64a2e45-24fd-4359-a429-c7a45a78fbe8/v1/itexperts4africa/IT%20Experts%0A4%20Africa/Boostez%20la%20performance%20de%20votre%20entreprise%20gr%C3%A2ce%20%C3%A0%20des%20solutions%20r%C3%A9seau%20sur%20mesure.Nous%20accompagnons%20les%20PME%20et%20grandes%20structures%20dans%20l%E2%80%99installation%2C%20la%20gestion%20et%20la%20s%C3%A9curisation%20de%20leurs%20infrastructures%20informatiques./https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fimages%2F4df55c30-02c4-4373-b5ad-180323229784.png%3Ftoken%3DtN6JC1VT6-frjkv4BDRmjdcWTfJVFOpsfqQNwBJSDH0%26height%3D415%26width%3D805%26expires%3D33289208197/og.png" />
+    <meta property="twitter:domain" content="itexperts4africa.com" />
     <meta property="twitter:url" content="http://itexperts4africa.com.com/" />
     <meta name="twitter:title" content="IT-EXPERTS-4-AFRICA" />
     <meta
       name="twitter:description"
-      content={`${t.description}`}
+      content={`${ts.description}`}
     />
     <meta name="twitter:image" content="/sitePreview.png" />
     <meta http-equiv="redirect" content="0;url=/fr/" />
-    <title title="IT-EXPERTS-4-AFRICA">{title}</title>
+    <title title="Itexperts4africa">{title}</title>
   </head>
 
   <body
@@ -105,17 +107,16 @@ const t = content[currentLocale as keyof typeof content] || content.fr;
       client:load
       className="fixed"
       logo="/WhiteLogo.png"
-      navItems={t.nav}
-      ctaButton={{ label: t.cta, href: "/contact" }}
-      bannerText={t.bannertext}
+      navItems={ts.nav}
+      ctaButton={{ label: ts.cta, href: "/contact" }}
+      bannerText={ts.bannertext}
     />
     <main class="snap-mandatory flex items-center flex-col justify-center">
       <TracingBeam client:only>
         <ScrollArrow client:only />
         <slot/>
     </main>
-    <Footer client:load bgGradient="bg-transparent backdrop-blur-xs" lang={langPath} t={t} />
+    <Footer client:load t={ts} client:load bgGradient="bg-transparent backdrop-blur-xs" lang={langPath}/>
     <Analytics client:only />
-
   </body>
 </html>

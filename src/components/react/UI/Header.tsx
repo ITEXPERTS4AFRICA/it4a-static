@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({
             <div className="container mx-auto flex items-center justify-center px-4 py-2">
               <span className="mr-2 animate-pulse">✨</span>
               <p className="text-sm md:text-base truncate">{bannerText}</p>
-              <a href={`mailto:info@konkdronetworks.com`}  className="ml-4 bg-white text-it4a-orange px-3 py-1 rounded-md text-xs font-Poppins hover:bg-it4a-primary transition-colors whitespace-nowrap">
+              <a href={`mailto:contact@itexperts4africa.com`}  className="ml-4 bg-white text-it4a-orange px-3 py-1 rounded-md text-xs font-Poppins hover:bg-it4a-primary transition-colors whitespace-nowrap">
                 {ctaButton.label}
               </a>
             </div>

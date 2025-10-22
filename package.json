@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.5",
     "@astrojs/node": "^9.4.3",
     "@astrojs/react": "^4.3.0",
     "@astrojs/sitemap": "^3.5.0",
@@ -46,7 +47,8 @@
     "swiper": "^11.2.10",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11",
-    "three": "^0.178.0"
+    "three": "^0.178.0",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@react-email/preview-server": "^4.2.0",

@@ -1,13 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
+type ScrollRevealProps = {
+  children: React.ReactNode;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'scale';
+  delay?: number;
+  duration?: number;
+  className?: string;
+};
+
+
 export default function ScrollReveal({ 
   children, 
   direction = 'up', 
   delay = 0, 
   duration = 0.6,
   className = '' 
-}) {
+}:ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -32,7 +41,7 @@ export default function ScrollReveal({
     };
   }, []);
 
-  const variants = {
+  const variants : any = {
     hidden: {
       opacity: 0,
       y: direction === 'up' ? 50 : direction === 'down' ? -50 : 0,
