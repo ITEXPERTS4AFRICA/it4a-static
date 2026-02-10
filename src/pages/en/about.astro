@@ -191,10 +191,10 @@ const addValueCompany = [
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                   client:only
-                >
-                  Founded in 2022, IT Experts 4 Africa already benefits from 3 years
+                >{`
+                  Founded in 2022, IT Experts 4 Africa already benefits from ${new Date().getFullYear() - 2022} years
                   of proven experience alongside its clients, with a clear ambition: democratizing access to cutting-edge IT technologies across the African continent.
-                </motion.p>
+                `}</motion.p>
                 <motion.p
                   className="md:text-lg text-gray-200 leading-relaxed"
                   initial={{ opacity: 0 }}

@@ -193,11 +193,11 @@ const currentLocale = 'fr';
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                   client:only
-                >
-                  Fondée en 2022, IT Experts 4 Africa cumule déjà 3 années
+                >{`
+                  Fondée en 2022, IT Experts 4 Africa cumule déjà ${new Date().getFullYear() - 2022 } années
                   d’expérience concrète aux côtés de ses clients, avec une
                   ambition claire : démocratiser l’accès aux technologies IT de
-                  pointe sur le continent africain.
+                  pointe sur le continent africain.`}
                 </motion.p>
                 <motion.p
                   className="md:text-lg text-gray-200 leading-relaxed"
