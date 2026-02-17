@@ -1,6 +1,9 @@
-
+const { heroui } = require("@heroui/react");
 module.exports = {
-    content:['./src/**/*.{astro,js,jsx,ts,tsx}'],
+    content:[
+      "./src/**/*.{astro,js,jsx,ts,tsx}",
+      "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
+    ],
   theme: {
     extend: [
       {
@@ -28,5 +31,6 @@ module.exports = {
 
   ]
   },
-  plugins: [],
+  darkmode:"class",
+  plugins: [heroui()],
 };

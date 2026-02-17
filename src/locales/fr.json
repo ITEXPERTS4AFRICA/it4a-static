@@ -1,24 +1,60 @@
 {
   "bannertext": "🔔 Profitez de notre offre spéciale de lancement",
   "nav": [
-    { "label": "Accueil", "href": "/" },
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
     {
       "label": "Services",
       "href": "#services",
       "subItems": [
-        { "label": "Tous les services", "href": "/services" },
-        { "label": "Ingénierie / Design", "href": "/services/ingenierie-design"},
-        { "label": "Implémentation", "href": "/services/implementation" },
-        { "label": "Études", "href": "/services/etudes" },
-        { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
-        { "label": "Gestion de Projets", "href": "/services/gestion-projets" },
-        { "label": "Support et Exploitation", "href": "/services/support-exploitation" },
-        { "label": "Formation IT", "href": "/services/formation-it" },
-        { "label": "Développement d'applications", "href": "/services/developpement-applications" }
+        {
+          "label": "Tous les services",
+          "href": "/services"
+        },
+        {
+          "label": "Ingénierie / Design",
+          "href": "/services/ingenierie-design"
+        },
+        {
+          "label": "Déployement",
+          "href": "/services/deloployement"
+        },
+        {
+          "label": "Études",
+          "href": "/services/etudes"
+        },
+        {
+          "label": "Audit / AMOA",
+          "href": "/services/audit-amoa"
+        },
+        {
+          "label": "Gestion de Projets",
+          "href": "/services/gestion-projets"
+        },
+        {
+          "label": "Support et Exploitation",
+          "href": "/services/support-exploitation"
+        },
+        {
+          "label": "Formation IT",
+          "href": "/services/formation-it"
+        },
+        {
+          "label": "Développement d'applications",
+          "href": "/services/developpement-applications"
+        }
       ]
     },
-    { "label": "À propos", "href": "/about" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "À propos",
+      "href": "/about"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
   ],
   "cta": "Contactez-nous",
   "description": "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.",
@@ -46,7 +82,7 @@
         "description": "Conception d’architectures réseau et IT sur mesure, alignées sur vos enjeux métiers."
       },
       "implementation": {
-        "title": "Implémentation",
+        "title": "déploiement",
         "description": "Déploiement rapide et sécurisé de vos solutions technologiques."
       },
       "studies": {
@@ -85,7 +121,6 @@
   "contact": {
     "hero_pre": "Contactez",
     "hero_post": "Nous",
-
     "hero_description": "Une question ? Un projet ? Parlons-en ! Notre équipe est là pour vous accompagner dans votre transformation numérique.",
     "form_title": "Envoyez-nous un message",
     "form_description": "Cliquez sur le bouton ci-dessous et nous vous recontacterons.",
@@ -160,14 +195,16 @@
       ]
     },
     "implementation": {
-      "label": "Implémentation",
+      "label": "Services de déploiement",
       "description": "Nous assurons le déploiement et l’intégration de solutions technologiques avec des standards de qualité élevés.",
       "details": [
         "Installation et configuration d’équipements réseau et sécurité (switches, routeurs, firewalls, WiFi, WLC)",
         "Intégration Datacenter (serveurs, hyperviseurs, stockage SAN/NAS, HCI, OpenStack/Kubernetes)",
         "Migration d’infrastructures (LAN, WAN, Cloud, VoIP, collaboration)",
+        "Configuration et intégration : Mise en service des équipements",
         "Déploiement de solutions de sécurité (antivirus, EDR, IAM, VPN, MFA)",
-        "Tests de performance, validation et mise en production"
+        "Documentation projet : HLD, LLD, as-built, procédures d’exploitation",
+        "Tests et validation : Vérification des performances et conformité"
       ]
     },
     "etudes": {
@@ -206,15 +243,30 @@
       ]
     },
     "support-exploitation": {
-      "label": "Support et Exploitation",
-      "description": "Nous assurons la disponibilité et la performance de vos systèmes 24/7.",
-      "details": [
-        "Supervision proactive (NOC/SOC, monitoring 24/7, alerting)",
-        "Maintenance préventive et corrective",
-        "Gestion des incidents et des problèmes (ITIL)",
-        "Patching et mises à jour régulières",
-        "Services managés (Managed Firewall, Managed LAN, Managed Cloud)",
-        "Optimisation continue des performances (capacity management, tuning)"
+      "label": "Services Managés",
+      "description": "Nous assurons la disponibilité, la sécurité et la performance de vos systèmes 24/7.",
+      "categories": [
+        {
+          "name": "Centre d’Opérations Réseau & Sécurité (NOC/SOC)",
+          "details": [
+            "Surveillance 24/7 : Monitoring continu des réseaux et de la sécurité",
+            "Gestion des incidents : Détection et résolution proactive des incidents",
+            "Reporting & Analytique : Tableaux de bord et analyses prédictives",
+            "Conformité & Audit : Vérification des politiques de sécurité et des exigences réglementaires",
+            "Supervision des SLA & KPI : Suivi en temps réel des indicateurs de performance et de disponibilité conformément aux engagements contractuels",
+            "Gestion des capacités & Planification de performance : Analyse proactive des tendances d’utilisation (CPU, mémoire, bande passante, sessions, etc.) et planification des évolutions nécessaires"
+          ]
+        },
+        {
+          "name": "Services de Maintenance",
+          "details": [
+            "Support technique : Assistance à distance ou sur site",
+            "Mises à jour logicielles : Maintenance corrective et évolutive",
+            "Gestion des garanties : Suivi des contrats de support fabricants",
+            "Gestion des pièces de rechange : Gestion des stocks et remplacement des équipements",
+            "Gestion des changements : Planification, validation, implémentation et documentation des modifications d’infrastructure (RFC, CAB, MOP, plan de retour arrière)"
+          ]
+        }
       ]
     },
     "formation-it": {
@@ -239,6 +291,30 @@
         "Tests et assurance qualité (QA, UAT, automatisation)",
         "Maintenance évolutive et corrective des applications"
       ]
+    },
+    "consulting-services": {
+      "label": "Services de conseil",
+      "description": "Nous vous accompagons dans l'evolution vos projets dans:",
+      "details": [
+        "Analyse et audit : Évaluation complète des infrastructures existantes",
+        "Conseil stratégique : Roadmap technologique alignée sur les objectifs business",
+        "Architecture et design : Plans détaillés pour des solutions sur mesure",
+        "Benchmark et recommandations : Comparaison des solutions du marché",
+        "AMOA / AMOE : Assistance à Maîtrise d’Ouvrage et à Maîtrise d’Œuvre pour projets IT et télécoms complexes",
+        "Études de faisabilité & business case : Analyse technico-économique, CAPEX / OPEX, ROI",
+        "Audit de conformité réglementaire : Télécom, data, cybersécurité (ex : exigences régulateurs, normes locales)",
+        "Urbanisation des systèmes d’information : Vision cible SI et trajectoire de transformation",
+        "Due diligence technique : Évaluation technique dans le cadre d’acquisitions, partenariats ou investissements"
+      ]
+    },
+    "etude-de-cas": {
+      "label": "Étude de cas",
+      "description": "Nous accompagnons les entreprises et les opérateurs avec des solutions mesurable et orientée Roi, Chaque projet comprend: ",
+      "details": [
+        "Analyse du contexte",
+        "Déploiement maîtrisé",
+        "Résultats mesurables"
+      ]
     }
   },
   "service_details_buttons": {
@@ -252,38 +328,98 @@
       {
         "title": "Navigation",
         "links": [
-          { "label": "Accueil", "href": "/" },
-          { "label": "Services", "href": "/services" },
-          { "label": "À propos", "href": "/about" },
-          { "label": "Contact", "href": "/contact" }
+          {
+            "label": "Accueil",
+            "href": "/"
+          },
+          {
+            "label": "Services",
+            "href": "/services"
+          },
+          {
+            "label": "À propos",
+            "href": "/about"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
         ]
       },
       {
         "title": "Services",
         "links": [
-          { "label": "Tous les services", "href": "/services" },
-          { "label": "Ingénierie / Design", "href": "/services/ingenierie-design" },
-          { "label": "Implémentation", "href": "/services/implementation" },
-          { "label": "Études", "href": "/services/etudes" },
-          { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
-          { "label": "Gestion de Projets", "href": "/services/gestion-projets" },
-          { "label": "Support et Exploitation", "href": "/services/support-exploitation" },
-          { "label": "Formation IT", "href": "/services/formation-it" },
-          { "label": "Développement d’applications", "href": "/services/developpement-applications" }
+          {
+            "label": "Tous les services",
+            "href": "/services"
+          },
+          {
+            "label": "Ingénierie / Design",
+            "href": "/services/ingenierie-design"
+          },
+          {
+            "label": "Implémentation",
+            "href": "/services/implementation"
+          },
+          {
+            "label": "Études",
+            "href": "/services/etudes"
+          },
+          {
+            "label": "Audit / AMOA",
+            "href": "/services/audit-amoa"
+          },
+          {
+            "label": "Gestion de Projets",
+            "href": "/services/gestion-projets"
+          },
+          {
+            "label": "Support et Exploitation",
+            "href": "/services/support-exploitation"
+          },
+          {
+            "label": "Formation IT",
+            "href": "/services/formation-it"
+          },
+          {
+            "label": "Développement d’applications",
+            "href": "/services/developpement-applications"
+          }
         ]
       }
     ],
     "contact_title": "Contact",
     "contactInfo": [
-      { "label": "Email", "value": "contact@itexperts4africa.com", "icon": "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
-      { "label": "Téléphone", "value": "+225 0748290303", "icon": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" },
-      { "label": "Adresse", "value": "Abidjan, riviera", "icon": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" }
+      {
+        "label": "Email",
+        "value": "contact@itexperts4africa.com",
+        "icon": "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      },
+      {
+        "label": "Téléphone",
+        "value": "+225 0748290303",
+        "icon": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+      },
+      {
+        "label": "Adresse",
+        "value": "Abidjan, riviera",
+        "icon": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"
+      }
     ],
     "copyrightText": "© %YEAR% IT-EXPERTS-4-AFRICA. Tous droits réservés.",
     "legalLinks": [
-      { "label": "Conditions d'utilisation", "href": "#" },
-      { "label": "Politique de confidentialité", "href": "#" },
-      { "label": "Politique de cookies", "href": "#" }
+      {
+        "label": "Conditions d'utilisation",
+        "href": "#"
+      },
+      {
+        "label": "Politique de confidentialité",
+        "href": "#"
+      },
+      {
+        "label": "Politique de cookies",
+        "href": "#"
+      }
     ],
     "newsletter": {
       "title": "Newsletter",
@@ -295,6 +431,7 @@
   "hero": {
     "title1": "It Experts",
     "title2": "4 Africa",
+    "sub_title": "Votre partenaire Stratégique en transformation digitale",
     "description": "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.\n\nChez IT Experts 4 Africa, nous aidons les PME comme les grandes organisations à transformer leur système d’information en un véritable levier de performance.\nDe l’architecture réseau à la cybersécurité, en passant par la gestion et l’optimisation des infrastructures, nous concevons et opérons des solutions fiables et évolutives, au service de vos enjeux métiers.",
     "learn_more_button": "En savoir plus",
     "our_services_button": "Nos services",

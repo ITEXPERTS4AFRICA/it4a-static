@@ -11,7 +11,7 @@ import fr from "@/locales/fr.json";
 import en from "@/locales/en.json";
 const currentLocale = 'en';
 const content = { fr, en };
-const t = content[currentLocale as keyof typeof content] || content.en;
+const t = (content[currentLocale as keyof typeof content] || content.en) as typeof fr;
 
 ---
 <Layout title="IT-EXPERTS-4-AFRICA | Home" langPath={currentLocale} >
@@ -20,7 +20,7 @@ const t = content[currentLocale as keyof typeof content] || content.en;
     <SectorsActiviter client:load t={t} />
     <SectionAbout client:only t={t} />
     <CtaSection  client:only t={t} />
-    <SectionPartner client:only t={t} />
+    <SectionPartner client:load t={t} />
     <!-- SplashScreen Component -->
     <SplashScreen client:only />
 </Layout>

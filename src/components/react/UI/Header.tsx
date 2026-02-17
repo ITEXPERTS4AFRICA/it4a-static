@@ -160,7 +160,7 @@ const Header: React.FC<HeaderProps> = ({
             {ctaButton.label}
           </GlowButton>
           <div className=" max-w-1/2 md:flex hidden items-center justify-center  bg-white/10 backdrop-blur-md rounded-lg px-3 py-2">
-                  <ButtonChangeLanguage  />
+              <ButtonChangeLanguage  />
           </div>
           <motion.button
             whileHover={{ scale: 1.1 }}

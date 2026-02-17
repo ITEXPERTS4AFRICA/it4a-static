@@ -62,8 +62,6 @@ const ts = content[currentLocale as keyof typeof content] || content.fr;
       content="website"
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    
-
     <link
       rel="icon"
       type="image/png"
@@ -116,7 +114,7 @@ const ts = content[currentLocale as keyof typeof content] || content.fr;
         <ScrollArrow client:only />
         <slot/>
     </main>
-    <Footer client:load t={ts} client:load bgGradient="bg-transparent backdrop-blur-xs" lang={langPath}/>
+    <Footer client:load t={ts} client:load bgGradient="bg-transparent backdrop-blur-xs" lang={langPath}/> 
     <Analytics client:only />
   </body>
 </html>

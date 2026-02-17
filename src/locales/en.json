@@ -7,14 +7,23 @@
       "href": "#services",
       "subItems": [
         { "label": "All Services", "href": "/services" },
-        { "label": "Engineering / Design", "href": "/services/ingenierie-design" },
+        {
+          "label": "Engineering / Design",
+          "href": "/services/ingenierie-design"
+        },
         { "label": "Implementation", "href": "/services/implementation" },
         { "label": "Studies", "href": "/services/etudes" },
         { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
         { "label": "Project Management", "href": "/services/gestion-projets" },
-        { "label": "Support & Operations", "href": "/services/support-exploitation" },
+        {
+          "label": "Support & Operations",
+          "href": "/services/support-exploitation"
+        },
         { "label": "IT Training", "href": "/services/formation-it" },
-        { "label": "Application Development", "href": "/services/developpement-applications" }
+        {
+          "label": "Application Development",
+          "href": "/services/developpement-applications"
+        }
       ]
     },
     { "label": "About", "href": "/about" },
@@ -46,7 +55,7 @@
         "description": "Design of tailor-made network and IT architectures, aligned with your business challenges."
       },
       "implementation": {
-        "title": "Implementation",
+        "title": "Deployment Services",
         "description": "Rapid and secure deployment of your technological solutions."
       },
       "studies": {
@@ -166,7 +175,8 @@
         "Datacenter integration (servers, hypervisors, SAN/NAS storage, HCI, OpenStack/Kubernetes)",
         "Infrastructure migration (LAN, WAN, Cloud, VoIP, collaboration)",
         "Deployment of security solutions (antivirus, EDR, IAM, VPN, MFA)",
-        "Performance testing, validation, and production deployment"
+        "Performance testing, validation, and production deployment",
+        "Project Documentation: HTL, LL, As-Build Documentation, Operational Procedures"
       ]
     },
     "etudes": {
@@ -205,19 +215,34 @@
       ]
     },
     "support-exploitation": {
-      "label": "Support and Operations",
-      "description": "We ensure the availability and performance of your systems 24/7.",
-      "details": [
-        "Proactive supervision (NOC/SOC, 24/7 monitoring, alerting)",
-        "Preventive and corrective maintenance",
-        "Incident and problem management (ITIL)",
-        "Patching and regular updates",
-        "Managed services (Managed Firewall, Managed LAN, Managed Cloud)",
-        "Continuous performance optimization (capacity management, tuning)"
+      "label": "Managed Services",
+      "description": "We ensure the availability, security, and performance of your systems 24/7.",
+      "categories": [
+        {
+          "name": "Network & Security Operation Center (NOC/SOC)",
+          "details": [
+            "24/7 Monitoring: Continuous network and security monitoring",
+            "Incident Management: Proactive detection and resolution of incidents",
+            "Reporting & Analytics: Dashboards and predictive analytics",
+            "Compliance & Audit: Verification of security policies and regulatory requirements",
+            "SLA & KPI Supervision: Real-time monitoring of performance and availability indicators in line with contractual commitments",
+            "Capacity Management & Performance Planning: Proactive analysis of usage trends (CPU, memory, bandwidth, sessions, etc.) and planning of required upgrades"
+          ]
+        },
+        {
+          "name": "Maintenance Services",
+          "details": [
+            "Technical Support: Remote or on-site assistance",
+            "Software Updates: Corrective and evolutionary maintenance",
+            "Warranty Management: Follow-up of vendor support contracts",
+            "Spare Parts Management: Inventory and replacement management",
+            "Change Management: Planning, validation, implementation, and documentation of infrastructure changes (RFC, CAB, MOP, backout plan)"
+          ]
+        }
       ]
     },
     "formation-it": {
-      "label": "IT Training",
+      "label": "Training",
       "description": "We strengthen the skills of your technical teams and users.",
       "details": [
         "Network and security training (Cisco CCNA/CCNP, Fortinet, Palo Alto)",
@@ -237,6 +262,30 @@
         "UX/UI design and prototyping",
         "Testing and quality assurance (QA, UAT, automation)",
         "Evolutionary and corrective application maintenance"
+      ]
+    },
+    "consulting-services": {
+      "label": "Consulting Services",
+      "description": "We support you in the evolution of your projects through:",
+      "details": [
+        "Analysis and Audit: Comprehensive assessment of existing infrastructures",
+        "Strategic Advisory: Technology roadmap aligned with business objectives",
+        "Architecture and Design: Detailed plans for tailored solutions",
+        "Benchmarking and Recommendations: Comparative analysis of market solutions",
+        "Business and Technical Project Assistance (AMOA / AMOE): Support for complex IT and telecom projects",
+        "Feasibility Studies & Business Case: Techno-economic analysis, CAPEX / OPEX evaluation, ROI assessment",
+        "Regulatory Compliance Audit: Telecom, data, and cybersecurity compliance (e.g., regulatory requirements, local standards)",
+        "Information System Urbanization: Target IS vision and transformation roadmap",
+        "Technical Due Diligence: Technical evaluation in the context of acquisitions, partnerships, or investments"
+      ]
+    },
+    "etude-de-cas": {
+      "label": "Success Stories",
+      "description": "We support companies and operators with measurable, ROI-driven solutions. Each project includes:",
+      "details": [
+        "Analyse du contexte",
+        "Déploiement maîtrisé",
+        "Résultats mesurables"
       ]
     }
   },
@@ -261,22 +310,46 @@
         "title": "Services",
         "links": [
           { "label": "All Services", "href": "/services" },
-          { "label": "Engineering / Design", "href": "/services/ingenierie-design" },
-          { "label": "Implementation", "href": "/services/implementation" },
+          {
+            "label": "Engineering / Design",
+            "href": "/services/ingenierie-design"
+          },
+          { "label": "deployement", "href": "/services/deployement" },
           { "label": "Studies", "href": "/services/etudes" },
           { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
-          { "label": "Project Management", "href": "/services/gestion-projets" },
-          { "label": "Support & Operations", "href": "/services/support-exploitation" },
+          {
+            "label": "Project Management",
+            "href": "/services/gestion-projets"
+          },
+          {
+            "label": "Support & Operations",
+            "href": "/services/support-exploitation"
+          },
           { "label": "IT Training", "href": "/services/formation-it" },
-          { "label": "Application Development", "href": "/services/developpement-applications" }
+          {
+            "label": "Application Development",
+            "href": "/services/developpement-applications"
+          }
         ]
       }
     ],
     "contact_title": "Contact",
     "contactInfo": [
-      { "label": "Email", "value": "contact@itexperts4africa.com", "icon": "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
-      { "label": "Phone", "value": "+225 0748290303", "icon": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" },
-      { "label": "Address", "value": "Abidjan, riviera", "icon": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" }
+      {
+        "label": "Email",
+        "value": "contact@itexperts4africa.com",
+        "icon": "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      },
+      {
+        "label": "Phone",
+        "value": "+225 0748290303",
+        "icon": "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+      },
+      {
+        "label": "Address",
+        "value": "Abidjan, riviera",
+        "icon": "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"
+      }
     ],
     "copyrightText": "© %YEAR% IT-EXPERTS-4-AFRICA. All rights reserved.",
     "legalLinks": [
@@ -294,6 +367,7 @@
   "hero": {
     "title1": "It Experts",
     "title2": "4 Africa",
+    "sub_title": "Your strategic partner in digital transformation",
     "description": "Accelerate your business growth and competitiveness through our expertise.\n\nAt IT  Experts 4 Africa, we help SMEs and large organizations transform their information systems into a real lever for performance.\nFrom network architecture to cybersecurity, including infrastructure management and optimization, we design and operate reliable and scalable solutions, serving your business challenges.",
     "learn_more_button": "Learn more",
     "our_services_button": "Our services",
