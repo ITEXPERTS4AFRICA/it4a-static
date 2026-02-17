@@ -29,6 +29,16 @@
     { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/contact" }
   ],
+  "hero": {
+    "title1": "It Experts",
+    "title2": "4 Africa",
+    "sub_title": "Your strategic partner in digital transformation",
+    "description": "Accelerate your business growth and competitiveness through our expertise.\n\nAt IT  Experts 4 Africa, we help SMEs and large organizations transform their information systems into a real lever for performance.\nFrom network architecture to cybersecurity, including infrastructure management and optimization, we design and operate reliable and scalable solutions, serving your business challenges.",
+    "learn_more_button": "Learn more",
+    "our_services_button": "Our services",
+    "satisfied_clients": "satisfied clients",
+    "projects_completed": "projects completed"
+  },
   "cta": "Contact Us",
   "description": "Accelerate your business growth and competitiveness through our expertise.",
   "descriptionHeader": "Boost your company's performance with tailor-made network solutions. We support SMEs and large organizations in the installation, management, and security of their IT infrastructures.",
@@ -84,6 +94,236 @@
       }
     }
   },
+  
+  "solutions": {
+    "enterprise_secure_networking": {
+      "title": "Enterprise Secure Networking",
+      "items": [
+        {
+          "name": "SD-WAN",
+          "description": "Software-defined wide area networks"
+        },
+        {
+          "name": "SASE",
+          "description": "Secure Access Service Edge"
+        },
+        {
+          "name": "Zero Trust Architecture",
+          "description": "Security model based on 'never trust, always verify'"
+        },
+        {
+          "name": "Secure WiFi",
+          "description": "Enterprise-grade wireless solutions"
+        }
+      ]
+    },
+    "open_networking": {
+      "title": "Open Networking",
+      "items": [
+        {
+          "name": "White-box switches",
+          "description": "Generic hardware with open software"
+        },
+        {
+          "name": "Network disaggregation",
+          "description": "Separation of hardware and software layers"
+        },
+        {
+          "name": "NOS (Network Operating Systems)",
+          "description": "Open network operating systems"
+        },
+        {
+          "name": "Automation frameworks",
+          "description": "Network automation tools and frameworks"
+        }
+      ]
+    },
+    "cybersecurity": {
+      "title": "Cybersecurity",
+      "items": [
+        {
+          "name": "Next-gen firewall",
+          "description": "Advanced firewall protection systems"
+        },
+        {
+          "name": "IPS/IDS",
+          "description": "Intrusion prevention and detection systems"
+        },
+        {
+          "name": "Endpoint protection",
+          "description": "Workstation and device security solutions"
+        },
+        {
+          "name": "IAM",
+          "description": "Identity and Access Management"
+        },
+        {
+          "name": "Threat intelligence",
+          "description": "Threat monitoring and analysis"
+        }
+      ]
+    },
+    "service_provider_infrastructure": {
+      "title": "Service Provider Infrastructure",
+      "items": [
+        {
+          "name": "Core networking",
+          "description": "Core networks for telecom operators"
+        },
+        {
+          "name": "Edge computing",
+          "description": "Distributed edge infrastructure solutions"
+        },
+        {
+          "name": "5G infrastructure",
+          "description": "Next-generation mobile network solutions"
+        },
+        {
+          "name": "Carrier-grade solutions",
+          "description": "Operator-level networking equipment"
+        }
+      ]
+    },
+    "collaboration_and_digital_workplace": {
+      "title": "Collaboration and Digital Workplace",
+      "items": [
+        {
+          "name": "Unified Communications",
+          "description": "Integrated communication platforms"
+        },
+        {
+          "name": "Video conferencing",
+          "description": "Enterprise video conferencing systems"
+        },
+        {
+          "name": "Collaborative tools",
+          "description": "Teamwork and productivity platforms"
+        },
+        {
+          "name": "Digital signage",
+          "description": "Dynamic display and information systems"
+        }
+      ]
+    },
+    "data_center_and_cloud_infrastructure": {
+      "title": "Data Center and Cloud Infrastructure",
+      "items": [
+        {
+          "name": "Hyperconverged infrastructure",
+          "description": "Integrated compute, storage, and networking solutions"
+        },
+        {
+          "name": "Software-defined storage",
+          "description": "Storage managed through software abstraction"
+        },
+        {
+          "name": "Private cloud",
+          "description": "Custom-built private cloud environments"
+        },
+        {
+          "name": "Hybrid cloud",
+          "description": "Integrated public and private cloud solutions"
+        }
+      ]
+    },
+    "digital_transformation": {
+      "title": "Digital Transformation",
+      "items": [
+        {
+          "name": "IoT solutions",
+          "description": "Internet of Things integration solutions"
+        },
+        {
+          "name": "AI/ML integration",
+          "description": "Artificial intelligence and machine learning integration"
+        },
+        {
+          "name": "Process automation",
+          "description": "Business process automation solutions"
+        },
+        {
+          "name": "Legacy modernization",
+          "description": "Modernization of legacy systems"
+        }
+      ]
+    },
+    "cloud_services": {
+      "title": "Cloud Services",
+      "items": [
+        {
+          "name": "Cloud migration",
+          "description": "Cloud migration assistance and strategy"
+        },
+        {
+          "name": "Multi-cloud management",
+          "description": "Management of multi-cloud environments"
+        },
+        {
+          "name": "Cloud security",
+          "description": "Specialized cloud security solutions"
+        },
+        {
+          "name": "Cost optimization",
+          "description": "Cloud cost monitoring and optimization"
+        }
+      ]
+    },
+    "devops_and_automation": {
+      "title": "DevOps & Automation",
+      "items": [
+        {
+          "name": "Infrastructure as Code (IaC)",
+          "description": "Infrastructure provisioning through code"
+        },
+        {
+          "name": "Network automation & scripting",
+          "description": "Automated network configuration and management"
+        },
+        {
+          "name": "Cloud & network orchestration",
+          "description": "Automated orchestration of cloud and network services"
+        }
+      ]
+    },
+    "erp": {
+      "title": "ERP Solutions",
+      "items": [
+        {
+          "name": "ERP Finance & Accounting",
+          "description": "Financial management, general and analytical accounting"
+        },
+        {
+          "name": "ERP Procurement & Inventory",
+          "description": "Supplier management, procurement, and logistics"
+        },
+        {
+          "name": "ERP Sales & CRM",
+          "description": "Sales management, invoicing, and customer relationship management"
+        },
+        {
+          "name": "ERP HR & Payroll",
+          "description": "Human resources, time tracking, and payroll management"
+        },
+        {
+          "name": "ERP Manufacturing & Projects",
+          "description": "Production, project management, cost control, and planning"
+        },
+        {
+          "name": "ERP Cloud & On-Premise",
+          "description": "Deployment on private cloud, hybrid, or on-premise infrastructure"
+        },
+        {
+          "name": "ERP Integration & Information Systems",
+          "description": "Integration with existing business applications"
+        },
+        {
+          "name": "ERP Security & High Availability",
+          "description": "Backup, disaster recovery, performance, and service continuity"
+        }
+      ]
+    }
+  },
+
   "cta_section": {
     "title1": "Transform your",
     "title2": "IT infrastructure?",
@@ -155,6 +395,13 @@
     "team_title": "Our Team of Experts",
     "team_description": "Certified professionals dedicated to your digital success"
   },
+  "section_partner": {
+  "title1": "Our Trusted",
+  "title2": "Partners",
+  "description": "Meet the companies that place their trust in us"
+}
+,
+
   "service_details": {
     "ingenierie-design": {
       "label": "Engineering / Design",
@@ -363,15 +610,7 @@
       "buttonText": "Subscribe",
       "description": "Receive our latest news and special offers"
     }
-  },
-  "hero": {
-    "title1": "It Experts",
-    "title2": "4 Africa",
-    "sub_title": "Your strategic partner in digital transformation",
-    "description": "Accelerate your business growth and competitiveness through our expertise.\n\nAt IT  Experts 4 Africa, we help SMEs and large organizations transform their information systems into a real lever for performance.\nFrom network architecture to cybersecurity, including infrastructure management and optimization, we design and operate reliable and scalable solutions, serving your business challenges.",
-    "learn_more_button": "Learn more",
-    "our_services_button": "Our services",
-    "satisfied_clients": "satisfied clients",
-    "projects_completed": "projects completed"
   }
+  
 }
+

@@ -1,11 +1,6 @@
 import React from "react"
-import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 
-import "swiper/css"
-import "swiper/css/effect-coverflow"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
 import { SparklesIcon } from "lucide-react"
 import {
   Autoplay,
@@ -48,10 +43,10 @@ export const CardCarousel: React.FC<CarouselProps> = ({
     width: 100%;
   }
   
-  
   .swiper-3d .swiper-slide-shadow-left {
     background-image: none;
   }
+    
   .swiper-3d .swiper-slide-shadow-right{
     background: none;
   }
@@ -112,7 +107,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div className="size-full rounded-3xl">
-                      <Image
+                      <img
                         src={image.src}
                         width={500}
                         height={500}
@@ -125,7 +120,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div className="size-full rounded-3xl">
-                      <Image
+                      <img
                         src={image.src}
                         width={200}
                         height={200}

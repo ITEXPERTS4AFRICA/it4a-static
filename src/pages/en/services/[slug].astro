@@ -6,6 +6,7 @@ import GlowButton from "@/components/react/UI/components/GlowButton";
 import fr from "@/locales/fr.json";
 import en from "@/locales/en.json";
 import serviceIcons from "@/contents/servicesData";
+ 
 const currentLocale = 'en';
 const content = { fr, en };
 const t = content[currentLocale as keyof typeof content] || content.en;
@@ -61,8 +62,8 @@ if (!serviceText || !serviceIcon) {
 
     <p class="text-gray-100 text-lg mb-8">{serviceText.description}</p>
 
-    <ul class="space-y-3">
-      {serviceText.details.map(item => (
+    <!-- <ul class="space-y-3">
+      {'details' in serviceText && serviceText.details.map(item => (
           <li class="flex items-start gap-3 backdrop-blur-xl backdrop-brightness-50  p-4 rounded-xl border-1 border-it4a-primary shadow-2xs shadow-white">
             <span class="text-it4a-primary ">
               <CheckCircle2/>
@@ -70,7 +71,22 @@ if (!serviceText || !serviceIcon) {
             <span class="text-gray-100">{item}</span>
           </li>
       ))}
-    </ul>
+      {'categories' in serviceText && serviceText.categories.map(category => (
+          <div class="space-y-2">
+            <h3 class="font-semibold text-it4a-primary">{category.name}</h3>
+            <ul class="space-y-2">
+              {category.details.map(item => (
+                <li class="flex items-start gap-3 backdrop-blur-xl backdrop-brightness-50  p-4 rounded-xl border-1 border-it4a-primary shadow-2xs shadow-white">
+                  <span class="text-it4a-primary ">
+                    <CheckCircle2/>
+                  </span>
+                  <span class="text-gray-100">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+      ))}
+    </ul> -->
 
     <div class="flex flex-col flex-1/2 w-full md:max-w-2xl   md:flex-row flex-wrap md:gap-5  gap-2 text-xs md:text-sm ">
       <GlowButton lg={currentLocale} client:only  className="flex-1"  href={`/services`}   variant="outline">  {t.service_details_buttons.back_to_services} </GlowButton>

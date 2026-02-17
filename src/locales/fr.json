@@ -1,4 +1,14 @@
 {
+  "hero": {
+    "title1": "It Experts",
+    "title2": "4 Africa",
+    "sub_title": "Votre partenaire Stratégique en transformation digitale",
+    "description": "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.\n\nChez IT Experts 4 Africa, nous aidons les PME comme les grandes organisations à transformer leur système d’information en un véritable levier de performance.\nDe l’architecture réseau à la cybersécurité, en passant par la gestion et l’optimisation des infrastructures, nous concevons et opérons des solutions fiables et évolutives, au service de vos enjeux métiers.",
+    "learn_more_button": "En savoir plus",
+    "our_services_button": "Nos services",
+    "satisfied_clients": "clients satisfaits",
+    "projects_completed": "projets réalisés"
+  },
   "bannertext": "🔔 Profitez de notre offre spéciale de lancement",
   "nav": [
     {
@@ -111,6 +121,236 @@
       }
     }
   },
+  
+    "solutions": {
+    "enterprise_secure_networking": {
+      "title": "Réseaux Sécurisés d’Entreprise",
+      "items": [
+        {
+          "name": "SD-WAN",
+          "description": "Réseaux étendus définis par logiciel"
+        },
+        {
+          "name": "SASE",
+          "description": "Secure Access Service Edge"
+        },
+        {
+          "name": "Architecture Zero Trust",
+          "description": "Modèle de sécurité basé sur le principe « ne jamais faire confiance, toujours vérifier »"
+        },
+        {
+          "name": "WiFi sécurisé",
+          "description": "Solutions sans-fil de niveau entreprise"
+        }
+      ]
+    },
+    "open_networking": {
+      "title": "Réseaux Ouverts",
+      "items": [
+        {
+          "name": "Switches White-box",
+          "description": "Matériel générique avec logiciel ouvert"
+        },
+        {
+          "name": "Désagrégation réseau",
+          "description": "Séparation des couches matériel et logiciel"
+        },
+        {
+          "name": "NOS (Systèmes d’exploitation réseau)",
+          "description": "Systèmes d’exploitation réseau ouverts"
+        },
+        {
+          "name": "Frameworks d’automatisation",
+          "description": "Outils et cadres d’automatisation réseau"
+        }
+      ]
+    },
+    "cybersecurity": {
+      "title": "Cybersécurité",
+      "items": [
+        {
+          "name": "Pare-feu nouvelle génération",
+          "description": "Systèmes avancés de protection réseau"
+        },
+        {
+          "name": "IPS / IDS",
+          "description": "Systèmes de prévention et de détection d’intrusion"
+        },
+        {
+          "name": "Protection des terminaux",
+          "description": "Sécurité des postes de travail et appareils"
+        },
+        {
+          "name": "IAM",
+          "description": "Gestion des identités et des accès"
+        },
+        {
+          "name": "Threat Intelligence",
+          "description": "Veille et analyse des menaces"
+        }
+      ]
+    },
+    "service_provider_infrastructure": {
+      "title": "Infrastructure pour Opérateurs",
+      "items": [
+        {
+          "name": "Réseaux cœur",
+          "description": "Réseaux centraux pour opérateurs télécom"
+        },
+        {
+          "name": "Edge Computing",
+          "description": "Infrastructures distribuées en périphérie"
+        },
+        {
+          "name": "Infrastructure 5G",
+          "description": "Solutions pour réseaux mobiles nouvelle génération"
+        },
+        {
+          "name": "Solutions Carrier-Grade",
+          "description": "Équipements et infrastructures de niveau opérateur"
+        }
+      ]
+    },
+    "collaboration_and_digital_workplace": {
+      "title": "Collaboration et Environnement de Travail Digital",
+      "items": [
+        {
+          "name": "Communications unifiées",
+          "description": "Plateformes intégrées de communication"
+        },
+        {
+          "name": "Visioconférence",
+          "description": "Systèmes de visioconférence d’entreprise"
+        },
+        {
+          "name": "Outils collaboratifs",
+          "description": "Plateformes de travail et de productivité en équipe"
+        },
+        {
+          "name": "Affichage dynamique",
+          "description": "Solutions de communication visuelle numérique"
+        }
+      ]
+    },
+    "data_center_and_cloud_infrastructure": {
+      "title": "Infrastructure Data Center et Cloud",
+      "items": [
+        {
+          "name": "Infrastructure hyperconvergée",
+          "description": "Solutions intégrant calcul, stockage et réseau"
+        },
+        {
+          "name": "Stockage défini par logiciel",
+          "description": "Stockage géré via abstraction logicielle"
+        },
+        {
+          "name": "Cloud privé",
+          "description": "Environnements cloud privés sur mesure"
+        },
+        {
+          "name": "Cloud hybride",
+          "description": "Intégration de clouds publics et privés"
+        }
+      ]
+    },
+    "digital_transformation": {
+      "title": "Transformation Digitale",
+      "items": [
+        {
+          "name": "Solutions IoT",
+          "description": "Intégration de solutions Internet des Objets"
+        },
+        {
+          "name": "Intégration IA / ML",
+          "description": "Intégration d’intelligence artificielle et machine learning"
+        },
+        {
+          "name": "Automatisation des processus",
+          "description": "Automatisation des processus métier"
+        },
+        {
+          "name": "Modernisation des systèmes hérités",
+          "description": "Mise à niveau des systèmes existants"
+        }
+      ]
+    },
+    "cloud_services": {
+      "title": "Services Cloud",
+      "items": [
+        {
+          "name": "Migration vers le cloud",
+          "description": "Accompagnement et stratégie de migration"
+        },
+        {
+          "name": "Gestion multi-cloud",
+          "description": "Gestion et supervision d’environnements multi-cloud"
+        },
+        {
+          "name": "Sécurité cloud",
+          "description": "Solutions spécialisées de sécurité cloud"
+        },
+        {
+          "name": "Optimisation des coûts",
+          "description": "Suivi et optimisation des dépenses cloud"
+        }
+      ]
+    },
+    "devops_and_automation": {
+      "title": "DevOps & Automatisation",
+      "items": [
+        {
+          "name": "Infrastructure as Code (IaC)",
+          "description": "Provisionnement d’infrastructure par le code"
+        },
+        {
+          "name": "Automatisation réseau & scripting",
+          "description": "Configuration et gestion automatisée des réseaux"
+        },
+        {
+          "name": "Orchestration cloud & réseau",
+          "description": "Orchestration automatisée des services cloud et réseau"
+        }
+      ]
+    },
+    "erp": {
+      "title": "Solutions ERP",
+      "items": [
+        {
+          "name": "ERP Finance & Comptabilité",
+          "description": "Gestion financière, comptabilité générale et analytique"
+        },
+        {
+          "name": "ERP Achats & Stocks",
+          "description": "Approvisionnement, gestion fournisseurs et logistique"
+        },
+        {
+          "name": "ERP Ventes & CRM",
+          "description": "Gestion commerciale, facturation et relation client"
+        },
+        {
+          "name": "ERP RH & Paie",
+          "description": "Gestion des ressources humaines, temps et paie"
+        },
+        {
+          "name": "ERP Industrie & Projets",
+          "description": "Gestion de production, projets, coûts et planification"
+        },
+        {
+          "name": "ERP Cloud & On-Premise",
+          "description": "Déploiement sur cloud privé, hybride ou infrastructure locale"
+        },
+        {
+          "name": "Intégration ERP & SI",
+          "description": "Interconnexion avec les applications métiers existantes"
+        },
+        {
+          "name": "Sécurité & haute disponibilité ERP",
+          "description": "Sauvegarde, PRA, performance et continuité de service"
+        }
+      ]
+    }
+  },
+
   "cta_section": {
     "title1": "Transformer votre",
     "title2": "infrastructure IT ?",
@@ -181,6 +421,11 @@
     "our_services_button": "Nos services",
     "team_title": "Notre Équipe d'Experts",
     "team_description": "Professionnels certifiés dédiés à votre réussite numérique"
+  },
+  "section_partner": {
+    "title1": "Nos partenaires",
+    "title2": "De confiance",
+    "description": "Découvrez les entreprises qui nous font confiance"
   },
   "service_details": {
     "ingenierie-design": {
@@ -427,15 +672,5 @@
       "buttonText": "S'inscrire",
       "description": "Recevez nos dernières actualités et offres spéciales"
     }
-  },
-  "hero": {
-    "title1": "It Experts",
-    "title2": "4 Africa",
-    "sub_title": "Votre partenaire Stratégique en transformation digitale",
-    "description": "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.\n\nChez IT Experts 4 Africa, nous aidons les PME comme les grandes organisations à transformer leur système d’information en un véritable levier de performance.\nDe l’architecture réseau à la cybersécurité, en passant par la gestion et l’optimisation des infrastructures, nous concevons et opérons des solutions fiables et évolutives, au service de vos enjeux métiers.",
-    "learn_more_button": "En savoir plus",
-    "our_services_button": "Nos services",
-    "satisfied_clients": "clients satisfaits",
-    "projects_completed": "projets réalisés"
   }
 }

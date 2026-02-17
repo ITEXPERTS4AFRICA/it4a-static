@@ -1,3 +1,6 @@
+import type { ServiceDetail } from "@/types/ServiceDetail";
+
+
 export interface Translation {
   bannertext: string;
   nav: Array<{
@@ -111,11 +114,7 @@ export interface Translation {
     team_description: string;
   };
   service_details: {
-    [key: string]: {
-      label: string;
-      description: string;
-      details: string[];
-    };
+    [key: string]:ServiceDetail;
   };
   service_details_buttons: {
     back_to_services: string;
