@@ -1,4 +1,4 @@
-import type { ServiceDetail } from "@/types/ServiceDetail";
+import type { ServiceDetails } from "@/types/ServiceDetail";
 
 
 export interface Translation {
@@ -32,22 +32,28 @@ export interface Translation {
     title2: string;
     description: string;
     items: {
-      engineering_design: { title: string; description: string };
-      implementation: { title: string; description: string };
-      studies: { title: string; description: string };
-      audit_amoa: { title: string; description: string };
-      project_management: { title: string; description: string };
-      support_operations: { title: string; description: string };
-      it_training: { title: string; description: string };
-      application_development: { title: string; description: string };
-    };
+      [key:string]:{
+        title:string,
+        description:string;
+      }
+    }
   };
+  solutions_section: {
+  title1: string,
+  title2: string,
+  description: string,
+  };
+  
+  solutions: Array<{
+    title: string;
+    items: Array<{
+      name:string;
+      description:string;
+    }>;
+  }>;
+
   cta_section: {
-    title1: string;
-    title2: string;
-    description: string;
-    contact_button: string;
-    learn_more_button: string;
+    [key:string]:string;
   };
   contact: {
     hero_pre: string;
@@ -113,16 +119,16 @@ export interface Translation {
     team_title: string;
     team_description: string;
   };
-  service_details: {
-    [key: string]:ServiceDetail;
-  };
+  service_details: ServiceDetails;
   service_details_buttons: {
     back_to_services: string;
     learn_more: string;
   };
   footer: {
-    companyName: string;
-    description: string;
+    companyName:string;
+    description:string;
+    contact_title:string;
+    copyrightText:string;
     sections: Array<{
       title: string;
       links: Array<{
@@ -130,31 +136,21 @@ export interface Translation {
         href: string;
       }>;
     }>;
-    contact_title: string;
+   
     contactInfo: Array<{
       label: string;
       value: string;
       icon: string;
     }>;
-    copyrightText: string;
     legalLinks: Array<{
       label: string;
       href: string;
     }>;
     newsletter: {
-      title: string;
-      placeholder: string;
-      buttonText: string;
-      description: string;
+     [key:string]:string;
     };
   };
   hero: {
-    title1: string;
-    title2: string;
-    description: string;
-    learn_more_button: string;
-    our_services_button: string;
-    satisfied_clients: string;
-    projects_completed: string;
+    [key:string]:string
   };
 }

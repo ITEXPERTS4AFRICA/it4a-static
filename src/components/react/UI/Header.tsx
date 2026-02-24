@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import GlowButton from '@/components/react/UI/components/GlowButton';
 import ButtonChangeLanguage from '@/components/react/UI/components/ButtonChangeLangue';
 import LangLink from '@/components/react/UI/LangLink';
+import { X } from 'lucide-react';
 
 interface NavItem {
   label: string;
@@ -70,8 +71,8 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header 
       ref={headerRef}
-      className={` ${className}  fixed top-el0 z-150 w-full transition-all duration-200 dark:bg-none 
-      ${isScrolled ? 'p-5 ' : ' bg-gradient-to-r from-it4a-secondary to-it4a-primary/15   transition-all .1s '}
+      className={`${className}  fixed top-el0 z-150 w-full transition-all duration-200 dark:bg-none 
+      ${isScrolled ? 'p-5 ' : ' transition-all .1s '}
       `}
     >
       <AnimatePresence>
@@ -80,15 +81,18 @@ const Header: React.FC<HeaderProps> = ({
             initial={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-transparent backdrop-blur-xs dark:bg-gradient-to-r  from-it4a-secondary to-it4a-primary/15 text-white overflow-hidden"
+            className="bg-transparent backdrop-blur-xs  from-it4a-secondary to-it4a-primary/15 text-white overflow-hidden"
           >
-            <div className="container mx-auto flex items-center justify-center px-4 py-2">
-              <span className="mr-2 animate-pulse">✨</span>
+            <div className="container mx-auto flex items-center justify-center px-4 py-2 gap-5">
               <p className="text-sm md:text-base truncate">{bannerText}</p>
               <a href={`mailto:contact@itexperts4africa.com`}  className="ml-4 bg-white text-it4a-orange px-3 py-1 rounded-md text-xs font-Poppins hover:bg-it4a-primary transition-colors whitespace-nowrap">
                 {ctaButton.label}
               </a>
+              <button onClick={()=>setIsBannerVisible(false) } className='rounded relative  bg-trensparent hover:scale-100 hover:text-red-500 hover:bg-white transition-all ease-in-out '>
+                <X className="h-4 text-white hover:text-black"/>
+              </button>
             </div>
+
           </motion.div>
         )}
       </AnimatePresence>
@@ -150,7 +154,7 @@ const Header: React.FC<HeaderProps> = ({
                           {subItem.label}
                         </LangLink>
                       </motion.li>
-                    ))}
+                    ))} 
                   </motion.ul>
                 )}
               </ul>
@@ -207,8 +211,9 @@ const Header: React.FC<HeaderProps> = ({
                 <ul className="space-y-2">
                   {navItems.map((item) => (
                     <li key={item.label} className="border-b border-it4a-primary/40 acitve:border-it4a-primary ">
+                      {item.href ? (
                       <LangLink
-                        href={!item.subItems ? item.href : '#'}
+                        href={ item.href }
                         onClick={() => {
                           if (item.subItems) {
                             setActiveSubMenu(activeSubMenu === item.label ? null : item.label);
@@ -223,6 +228,17 @@ const Header: React.FC<HeaderProps> = ({
                           </span>
                         )}
                       </LangLink>
+                      ):(
+                        <div>
+                           {item.label}
+                        {item.subItems && (
+                          <span className={`transform transition-transform ${activeSubMenu === item.label ? 'rotate-180' : ''}`}>
+                            ▼
+                          </span>
+                        )}
+                        </div>
+                      )
+                    }
                       {item.subItems && activeSubMenu === item.label && (
                         <motion.ul
                           initial={{ height: 0, opacity: 0 }}

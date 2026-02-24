@@ -8,7 +8,7 @@ const services = [
     icon: Settings,
   },
   {
-    slug: "implementation",
+    slug: "deployment-services",
     icon: Shield,
   },
   {
@@ -28,7 +28,7 @@ const services = [
     icon: Users,
   },
   {
-    slug: "formation-it",
+    slug: "formation",
     icon: BookOpen,
   },
   {

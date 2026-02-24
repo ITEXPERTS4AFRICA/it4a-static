@@ -1,33 +1,60 @@
 {
   "bannertext": "🔔 Take advantage of our special introductory offer",
   "nav": [
-    { "label": "Home", "href": "/" },
+    {
+      "label": "Home",
+      "href": "/"
+    },
     {
       "label": "Services",
       "href": "#services",
       "subItems": [
-        { "label": "All Services", "href": "/services" },
+        {
+          "label": "All Services",
+          "href": "/services"
+        },
         {
           "label": "Engineering / Design",
           "href": "/services/ingenierie-design"
         },
-        { "label": "Implementation", "href": "/services/implementation" },
-        { "label": "Studies", "href": "/services/etudes" },
-        { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
-        { "label": "Project Management", "href": "/services/gestion-projets" },
+        {
+          "label": "Deployment services",
+          "href": "/services/deployment-services"
+        },
+        {
+          "label": "Studies",
+          "href": "/services/etudes"
+        },
+        {
+          "label": "Audit / AMOA",
+          "href": "/services/audit-amoa"
+        },
+        {
+          "label": "Project Management",
+          "href": "/services/gestion-projets"
+        },
         {
           "label": "Support & Operations",
           "href": "/services/support-exploitation"
         },
-        { "label": "IT Training", "href": "/services/formation-it" },
+        {
+          "label": "Training",
+          "href": "/services/formation"
+        },
         {
           "label": "Application Development",
           "href": "/services/developpement-applications"
         }
       ]
     },
-    { "label": "About", "href": "/about" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
   ],
   "hero": {
     "title1": "It Experts",
@@ -64,8 +91,8 @@
         "title": "Engineering / Design",
         "description": "Design of tailor-made network and IT architectures, aligned with your business challenges."
       },
-      "implementation": {
-        "title": "Deployment Services",
+      "deployement": {
+        "title": "Deployement Services",
         "description": "Rapid and secure deployment of your technological solutions."
       },
       "studies": {
@@ -81,11 +108,11 @@
         "description": "Rigorous management guaranteeing controlled deadlines, costs, and results."
       },
       "support_operations": {
-        "title": "Support and Operations",
+        "title": "Maintenance Service",
         "description": "Proactive supervision and maintenance to ensure continuity and performance."
       },
       "it_training": {
-        "title": "IT Training",
+        "title": "Training",
         "description": "Adapted programs to sustainably strengthen your teams' skills."
       },
       "application_development": {
@@ -94,9 +121,13 @@
       }
     }
   },
-  
-  "solutions": {
-    "enterprise_secure_networking": {
+  "solutions_section": {
+    "title1": "Powering",
+    "title2": "Your Digital Future",
+    "description": "We design and deploy cutting-edge technology solutions that enhance connectivity, protect critical assets, and enable organizations to thrive in a digital-first world."
+  },
+  "solutions": [
+     {
       "title": "Enterprise Secure Networking",
       "items": [
         {
@@ -117,7 +148,7 @@
         }
       ]
     },
-    "open_networking": {
+    {
       "title": "Open Networking",
       "items": [
         {
@@ -138,7 +169,7 @@
         }
       ]
     },
-    "cybersecurity": {
+    {
       "title": "Cybersecurity",
       "items": [
         {
@@ -163,7 +194,7 @@
         }
       ]
     },
-    "service_provider_infrastructure": {
+    {
       "title": "Service Provider Infrastructure",
       "items": [
         {
@@ -184,7 +215,7 @@
         }
       ]
     },
-    "collaboration_and_digital_workplace": {
+    {
       "title": "Collaboration and Digital Workplace",
       "items": [
         {
@@ -205,7 +236,7 @@
         }
       ]
     },
-    "data_center_and_cloud_infrastructure": {
+    {
       "title": "Data Center and Cloud Infrastructure",
       "items": [
         {
@@ -226,7 +257,7 @@
         }
       ]
     },
-    "digital_transformation": {
+    {
       "title": "Digital Transformation",
       "items": [
         {
@@ -247,7 +278,7 @@
         }
       ]
     },
-    "cloud_services": {
+    {
       "title": "Cloud Services",
       "items": [
         {
@@ -268,7 +299,7 @@
         }
       ]
     },
-    "devops_and_automation": {
+     {
       "title": "DevOps & Automation",
       "items": [
         {
@@ -285,7 +316,7 @@
         }
       ]
     },
-    "erp": {
+    {
       "title": "ERP Solutions",
       "items": [
         {
@@ -322,8 +353,7 @@
         }
       ]
     }
-  },
-
+  ],
   "cta_section": {
     "title1": "Transform your",
     "title2": "IT infrastructure?",
@@ -396,15 +426,14 @@
     "team_description": "Certified professionals dedicated to your digital success"
   },
   "section_partner": {
-  "title1": "Our Trusted",
-  "title2": "Partners",
-  "description": "Meet the companies that place their trust in us"
-}
-,
-
+    "title1": "Our Trusted",
+    "title2": "Partners",
+    "description": "Meet the companies that place their trust in us"
+  },
   "service_details": {
     "ingenierie-design": {
       "label": "Engineering / Design",
+      "img":"/image/services/img12.webp",
       "description": "We design network and IT architectures tailored to your business needs, combining performance, security, and scalability.",
       "details": [
         "HLD (High Level Design) and LLD (Low Level Design) architecture studies",
@@ -414,8 +443,9 @@
         "Design of business continuity and disaster recovery plans (BCP/DRP)"
       ]
     },
-    "implementation": {
-      "label": "Implementation",
+    "deployment-services": {
+      "label": "Deployment",
+      "img":"/image/services/img0.webp",
       "description": "We ensure the deployment and integration of technological solutions with high quality standards.",
       "details": [
         "Installation and configuration of network and security equipment (switches, routers, firewalls, WiFi, WLC)",
@@ -428,6 +458,7 @@
     },
     "etudes": {
       "label": "Studies",
+      "img":"/image/services/img13.webp",
       "description": "We carry out strategic and technical studies to guide your decisions and optimize your investments.",
       "details": [
         "Feasibility studies (technical, economic, regulatory)",
@@ -439,6 +470,7 @@
     },
     "audit-amoa": {
       "label": "Audit / AMOA",
+      "img":"/image/services/img3.webp",
       "description": "We support you in your digital transformation projects with an independent perspective.",
       "details": [
         "Technical audit (network, security, systems, cloud, application)",
@@ -451,6 +483,7 @@
     },
     "gestion-projets": {
       "label": "Project Management",
+      "img":"/image/services/img6.webp",
       "description": "We manage your IT and telecom projects with method and transparency.",
       "details": [
         "Management methodologies (PMI, Prince2, Agile, Scrum)",
@@ -463,6 +496,7 @@
     },
     "support-exploitation": {
       "label": "Managed Services",
+      "img":"/image/services/img9.webp",
       "description": "We ensure the availability, security, and performance of your systems 24/7.",
       "categories": [
         {
@@ -488,8 +522,9 @@
         }
       ]
     },
-    "formation-it": {
+    "formation": {
       "label": "Training",
+      "img":"/image/services/img5.webp",
       "description": "We strengthen the skills of your technical teams and users.",
       "details": [
         "Network and security training (Cisco CCNA/CCNP, Fortinet, Palo Alto)",
@@ -501,6 +536,7 @@
     },
     "developpement-applications": {
       "label": "Application Development",
+      "img":"/image/services/img11.webp",
       "description": "We develop custom software and mobile solutions adapted to your business.",
       "details": [
         "Web and mobile application development (Android/iOS)",
@@ -513,6 +549,7 @@
     },
     "consulting-services": {
       "label": "Consulting Services",
+      "img":"/image/services/img7.webp",
       "description": "We support you in the evolution of your projects through:",
       "details": [
         "Analysis and Audit: Comprehensive assessment of existing infrastructures",
@@ -528,6 +565,7 @@
     },
     "etude-de-cas": {
       "label": "Success Stories",
+      "img":"/image/services/img4.webp",
       "description": "We support companies and operators with measurable, ROI-driven solutions. Each project includes:",
       "details": [
         "Analyse du contexte",
@@ -547,23 +585,47 @@
       {
         "title": "Navigation",
         "links": [
-          { "label": "Home", "href": "/" },
-          { "label": "Services", "href": "/services" },
-          { "label": "About", "href": "/about" },
-          { "label": "Contact", "href": "/contact" }
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Services",
+            "href": "/services"
+          },
+          {
+            "label": "About",
+            "href": "/about"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
         ]
       },
       {
         "title": "Services",
         "links": [
-          { "label": "All Services", "href": "/services" },
+          {
+            "label": "All Services",
+            "href": "/services"
+          },
           {
             "label": "Engineering / Design",
             "href": "/services/ingenierie-design"
           },
-          { "label": "deployement", "href": "/services/deployement" },
-          { "label": "Studies", "href": "/services/etudes" },
-          { "label": "Audit / AMOA", "href": "/services/audit-amoa" },
+          {
+            "label": "Deployement",
+            "href": "/services/deployement"
+          },
+          {
+            "label": "Studies",
+            "href": "/services/etudes"
+          },
+          {
+            "label": "Audit / AMOA",
+            "href": "/services/audit-amoa"
+          },
           {
             "label": "Project Management",
             "href": "/services/gestion-projets"
@@ -572,7 +634,10 @@
             "label": "Support & Operations",
             "href": "/services/support-exploitation"
           },
-          { "label": "IT Training", "href": "/services/formation-it" },
+          {
+            "label": "IT Training",
+            "href": "/services/formation-it"
+          },
           {
             "label": "Application Development",
             "href": "/services/developpement-applications"
@@ -600,9 +665,18 @@
     ],
     "copyrightText": "© %YEAR% IT-EXPERTS-4-AFRICA. All rights reserved.",
     "legalLinks": [
-      { "label": "Terms of Service", "href": "#" },
-      { "label": "Privacy Policy", "href": "#" },
-      { "label": "Cookie Policy", "href": "#" }
+      {
+        "label": "Terms of Service",
+        "href": "#"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "#"
+      },
+      {
+        "label": "Cookie Policy",
+        "href": "#"
+      }
     ],
     "newsletter": {
       "title": "Newsletter",
@@ -611,6 +685,4 @@
       "description": "Receive our latest news and special offers"
     }
   }
-  
 }
-

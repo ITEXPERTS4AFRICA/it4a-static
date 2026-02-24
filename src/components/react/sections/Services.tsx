@@ -4,7 +4,7 @@ import TriangularBackground from "../UI/Animation/TriangularBackground";
 import TitleDescript from "../UI/components/TitleDescript";
 import TransitionSVGSection from "../UI/components/TransitionSVGSection";
 import GlowButton from "../UI/components/GlowButton";
-
+import type {Translation} from "@/types/translations";
 
 interface ServicesProps {
   title?: string;
@@ -12,11 +12,11 @@ interface ServicesProps {
   icon?: React.ReactNode;
   index?: number;
   className?: string;
-  t?: typeof import("@/locales/fr.json");
+  t?: Translation;
 }
 
 interface ServicesSectionProps {
-  t: typeof import("@/locales/fr.json");
+  t?: typeof import("@/locales/fr.json");
   className?: string;
 }
 
@@ -27,50 +27,50 @@ export const ServicesSection: React.FC<ServicesSectionProps> = (
 const services = [
   {
     icon: <Settings className="w-8 h-8" />,
-    title: t.services_section.items.engineering_design.title,
-    description: t.services_section.items.engineering_design.description,
+    title: t?.services_section.items.engineering_design.title,
+    description: t?.services_section.items.engineering_design.description,
   },
   {
     icon: <Shield className="w-8 h-8" />,
-    title: t.services_section.items.implementation.title,
-    description: t.services_section.items.implementation.description,
+    title: t?.services_section.items.deployement.title,
+    description: t?.services_section.items.deployement.description,
   },
   {
     icon: <Cloud className="w-8 h-8" />,
-    title: t.services_section.items.studies.title,
-    description: t.services_section.items.studies.description,
+    title: t?.services_section.items.studies.title,
+    description: t?.services_section.items.studies.description,
   },
   {
     icon: <Search className="w-8 h-8" />,
-    title: t.services_section.items.audit_amoa.title,
-    description: t.services_section.items.audit_amoa.description,
+    title: t?.services_section.items.audit_amoa.title,
+    description: t?.services_section.items.audit_amoa.description,
   },
   {
     icon: <FolderOpen className="w-8 h-8" />,
-    title: t.services_section.items.project_management.title,
-    description: t.services_section.items.project_management.description,
+    title: t?.services_section.items.project_management.title,
+    description: t?.services_section.items.project_management.description,
   },
   {
     icon: <Users className="w-8 h-8" />,
-    title: t.services_section.items.support_operations.title,
-    description: t.services_section.items.support_operations.description,
+    title: t?.services_section.items.support_operations.title,
+    description: t?.services_section.items.support_operations.description,
   },
   {
     icon: <BookOpen className="w-8 h-8" />,
-    title: t.services_section.items.it_training.title,
-    description: t.services_section.items.it_training.description,
+    title: t?.services_section.items.it_training.title,
+    description: t?.services_section.items.it_training.description,
   },
   {
     icon: <Code className="w-8 h-8" />,
-    title: t.services_section.items.application_development.title,
-    description: t.services_section.items.application_development.description,
+    title: t?.services_section.items.application_development.title,
+    description: t?.services_section.items.application_development.description,
   },
 ];
   return (
     <TriangularBackground theme="dark" className="w-full h-full">
       <section id="services" className={` py-10 md:py-20 h-full w-full flex flex-col items-center backdrop-blur-xs px-2  md:px-4  bg-it4a-secondary/50 justify-center scroll-mt-px z-0 ${className} `}>
         <TransitionSVGSection />
-        <TitleDescript title={t.services_section.title1} title2={t.services_section.title2} descript={t.services_section.description} />
+        <TitleDescript title={t?.services_section.title1} title2={t?.services_section.title2} descript={t?.services_section.description} />
         <GlowButton href="/services" variant="outline" className="rounded-b-full mt-2  grop-hover:rounded-ee-ful transition-all ease-in-out overflow-hidden .4s">
           <ArrowUpRightFromCircleIcon/>
         </GlowButton>

@@ -28,8 +28,8 @@
           "href": "/services/ingenierie-design"
         },
         {
-          "label": "Déployement",
-          "href": "/services/deloployement"
+          "label": "Services de déploiement",
+          "href": "/services/deployment-services"
         },
         {
           "label": "Études",
@@ -48,8 +48,8 @@
           "href": "/services/support-exploitation"
         },
         {
-          "label": "Formation IT",
-          "href": "/services/formation-it"
+          "label": "Formation",
+          "href": "/services/formation"
         },
         {
           "label": "Développement d'applications",
@@ -91,8 +91,8 @@
         "title": "Ingénierie / Design",
         "description": "Conception d’architectures réseau et IT sur mesure, alignées sur vos enjeux métiers."
       },
-      "implementation": {
-        "title": "déploiement",
+      "deployement": {
+        "title": "Services de  Deployement",
         "description": "Déploiement rapide et sécurisé de vos solutions technologiques."
       },
       "studies": {
@@ -108,11 +108,11 @@
         "description": "Pilotage rigoureux garantissant délais, coûts et résultats maîtrisés."
       },
       "support_operations": {
-        "title": "Support et Exploitation",
+        "title": "Service de Maitenance",
         "description": "Supervision et maintenance proactive pour assurer continuité et performance."
       },
       "it_training": {
-        "title": "Formation IT",
+        "title": "Formation",
         "description": "Programmes adaptés pour renforcer durablement les compétences de vos équipes."
       },
       "application_development": {
@@ -122,7 +122,13 @@
     }
   },
   
-    "solutions": {
+  "solutions_section": {
+    "title1": "Accélérez",
+    "title2": "Votre Avenir Digital",
+    "description": "Nous développons des solutions technologiques de pointe pour améliorer la connectivité, protéger vos actifs critiques et permettre à votre organisation d’évoluer dans un monde numérique en constante mutation."
+  },
+
+  "solutions": {
     "enterprise_secure_networking": {
       "title": "Réseaux Sécurisés d’Entreprise",
       "items": [
@@ -430,6 +436,7 @@
   "service_details": {
     "ingenierie-design": {
       "label": "Ingénierie / Design",
+      "img":"/image/services/img12.webp",
       "description": "Nous concevons des architectures réseau et IT adaptées à vos besoins métiers, alliant performance, sécurité et évolutivité.",
       "details": [
         "Études d’architecture HLD (High Level Design) et LLD (Low Level Design)",
@@ -439,8 +446,9 @@
         "Conception de plans de continuité et de reprise d’activité (PCA/PRA)"
       ]
     },
-    "implementation": {
+    "deployment-services": {
       "label": "Services de déploiement",
+      "img":"/image/services/img0.webp",
       "description": "Nous assurons le déploiement et l’intégration de solutions technologiques avec des standards de qualité élevés.",
       "details": [
         "Installation et configuration d’équipements réseau et sécurité (switches, routeurs, firewalls, WiFi, WLC)",
@@ -454,6 +462,7 @@
     },
     "etudes": {
       "label": "Études",
+      "img":"/image/services/img13.webp",
       "description": "Nous réalisons des études stratégiques et techniques pour orienter vos décisions et optimiser vos investissements.",
       "details": [
         "Études de faisabilité (technique, économique, réglementaire)",
@@ -465,6 +474,7 @@
     },
     "audit-amoa": {
       "label": "Audit / AMOA",
+      "img":"/image/services/img3.webp",
       "description": "Nous vous accompagnons dans vos projets de transformation numérique avec un regard indépendant.",
       "details": [
         "Audit technique (réseau, sécurité, systèmes, cloud, applicatif)",
@@ -477,6 +487,7 @@
     },
     "gestion-projets": {
       "label": "Gestion de Projets",
+      "img":"/image/services/img6.webp",
       "description": "Nous pilotons vos projets IT et télécoms avec méthode et transparence.",
       "details": [
         "Méthodologies de gestion (PMI, Prince2, Agile, Scrum)",
@@ -489,6 +500,7 @@
     },
     "support-exploitation": {
       "label": "Services Managés",
+      "img":"/image/services/img9.webp",
       "description": "Nous assurons la disponibilité, la sécurité et la performance de vos systèmes 24/7.",
       "categories": [
         {
@@ -514,8 +526,9 @@
         }
       ]
     },
-    "formation-it": {
-      "label": "Formation IT",
+    "formation": {
+      "label": "Formation",
+      "img":"/image/services/img5.webp",
       "description": "Nous renforçons les compétences de vos équipes techniques et utilisateurs.",
       "details": [
         "Formations réseaux et sécurité (Cisco CCNA/CCNP, Fortinet, Palo Alto)",
@@ -527,6 +540,7 @@
     },
     "developpement-applications": {
       "label": "Développement d’applications",
+      "img":"/image/services/img11.webp",
       "description": "Nous développons des solutions logicielles et mobiles adaptées à vos métiers.",
       "details": [
         "Développement d’applications web et mobiles (Android/iOS)",
@@ -539,6 +553,7 @@
     },
     "consulting-services": {
       "label": "Services de conseil",
+      "img":"/image/services/img7.webp",
       "description": "Nous vous accompagons dans l'evolution vos projets dans:",
       "details": [
         "Analyse et audit : Évaluation complète des infrastructures existantes",
@@ -554,6 +569,7 @@
     },
     "etude-de-cas": {
       "label": "Étude de cas",
+      "img":"/image/services/img4.webp",
       "description": "Nous accompagnons les entreprises et les opérateurs avec des solutions mesurable et orientée Roi, Chaque projet comprend: ",
       "details": [
         "Analyse du contexte",
@@ -603,8 +619,8 @@
             "href": "/services/ingenierie-design"
           },
           {
-            "label": "Implémentation",
-            "href": "/services/implementation"
+            "label": "Services de déploiement",
+            "href": "/services/deployment-services"
           },
           {
             "label": "Études",

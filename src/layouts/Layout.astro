@@ -11,10 +11,11 @@ import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import fr from "@/locales/fr.json" ;
 import en from "@/locales/en.json" ;
+import {AnimateSharedLayout} from "framer-motion"
 import type { loadTSConfig } from "node_modules/astro/dist/core/config/tsconfig";
 
 export interface Props {
-  langPath?:string;
+  langPath?:any;
   title?: string;
   description?: string;
 }
@@ -23,10 +24,10 @@ const currentLocale = Astro.currentLocale || 'fr';
 const {
   title = "IT-EXPERTS-4-AFRICA",
   description = "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.",
-  langPath = currentLocale } = Astro.props;
+  langPath = currentLocale  } = Astro.props;
 
 const content = { fr, en };
-const ts = content[currentLocale as keyof typeof content] || content.fr;
+const ts = (content[currentLocale as keyof typeof content] || content.fr) as any;
 ---
 
 <!doctype html>
@@ -100,6 +101,7 @@ const ts = content[currentLocale as keyof typeof content] || content.fr;
     class="bg-gradient-to-b from-it4a-secondary via-neutral-800 to-it4a-primary/80 box-border font-Poppins" 
     transition:animate="fade"
   >
+  <AnimateSharedLayout client:load>
     <AnimatedNetworkBackground className="-z-200" client:only />
     <Header
       client:load
@@ -114,7 +116,8 @@ const ts = content[currentLocale as keyof typeof content] || content.fr;
         <ScrollArrow client:only />
         <slot/>
     </main>
-    <Footer client:load t={ts} client:load bgGradient="bg-transparent backdrop-blur-xs" lang={langPath}/> 
-    <Analytics client:only />
+    <Footer client:load t={ts} client:load bgGradient="bg-transparent backdrop-blur-xs" /> 
+  </AnimateSharedLayout>
+    <Analytics client:only /></AnimateSharedLayout>
   </body>
 </html>

@@ -553,16 +553,13 @@ export default function Contact({ t }: { t?: Record<string, any> }) {
             >
               <div className="p-6">
                 <div className="aspect-video bg-gray-10 rounded-lg flex items-center justify-center">
-                  <iframe
-                    title="Google Maps Embed"
-                    className="w-full h-full"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d616.7870525443217!2d-3.9263708229315584!3d5.376691319980471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eded03330515%3A0x2e2d63a30d5fc6bd!2sLaurier%2017!5e1!3m2!1sfr!2sci!4v1757026258482!5m2!1sfr!2sci"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31778.12047514838!2d-3.9258220000000006!3d5.376496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eded03330515%3A0x2e2d63a30d5fc6bd!2sLaurier%2017!5e0!3m2!1sfr!2sci!4v1771929586167!5m2!1sfr!2sci" 
+                  width="100%" 
+                  height="100%" style={{ border:0 }}  
+                  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                
+                ></iframe>
                 </div>
               </div>
             </motion.div>

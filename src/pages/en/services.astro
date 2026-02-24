@@ -1,18 +1,5 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import {
-  Shield,
-  Cloud,
-  CheckCircle,
-  ArrowRight,
-  ClipboardCheck,
-  Settings,
-  Search,
-  Users,
-  BookOpen,
-  Code,
-} from "lucide-react";
-
 import DecryptedText from "@/components/react/UI/Text/DecryptedText";
 import LightCommunicationBackground from "@/components/react/UI/Animation/LightCommunicationBackground";
 import en from '@/locales/en.json';
@@ -35,26 +22,15 @@ import TitleDescript from "@/components/react/UI/components/TitleDescript";
 import { BackgroundBeams } from "@/components/uiAceternity/UI/Background/BackgroundBeams";
 import { ServicesComplementaire } from "@/components/uiAceternity/UI/componentlist";
 import { motion } from "framer-motion";
-
-const serviceDefs = [
-  { slug: 'ingenierie-design', img: ImgCpInt, icon: Settings, color: 'from-blue-500 to-blue-600' },
-  { slug: 'implementation', img: ImgAuditSecurity, icon: Shield, color: 'from-green-500 to-green-600' },
-  { slug: 'etudes', img: ImgMainTISupportIT, icon: Cloud, color: 'from-purple-500 to-purple-600' },
-  { slug: 'audit-amoa', img: ImgVitualServices, icon: Search, color: 'from-indigo-500 to-indigo-600' },
-  { slug: 'gestion-projets', img: ImgGestionProjets, icon: ClipboardCheck, color: 'from-red-500 to-red-600' },
-  { slug: 'support-exploitation', img: ImgEtudeIngenierie, icon: Users, color: 'from-orange-500 to-orange-600' },
-  { slug: 'formation-it', img: ImgFormaServices, icon: BookOpen, color: 'from-green-500 to-blue-700' },
-  { slug: 'developpement-applications', img: ImgDevServices, icon: Code, color: 'from-pink-500 to-pink-600' },
-];
-
-const services = serviceDefs.map(s => ({
-  img: s.img,
-  icon: s.icon,
-  title: t.service_details[s.slug as keyof typeof t.service_details].label,
-  description: t.service_details[s.slug as keyof typeof t.service_details].description,
-  features: t.service_details[s.slug as keyof typeof t.service_details].details,
-  color: s.color,
-}));
+import {ArrowRight, CheckCircle, CircleDotDashedIcon} from "@lucide/astro";
+const services = Object.entries(t.service_details).map(([key, value])=> (
+  {
+    id:key,
+    ...value,
+    color:"bg-it4a-primary",
+    icon:CircleDotDashedIcon
+  }
+));
 
 ---
 
@@ -135,11 +111,11 @@ const services = serviceDefs.map(s => ({
                           <div
                             class={` rounded-full flex items-center justify-center text-it4a-primary w-10 h-10 md:w-12 md:h-12`}
                           >
-                            <service.icon className="w-6 h-6 md:w-8 md:h-8" />
+                            <service.icon class="w-6 h-6 md:w-8 md:h-8" />
                           </div>
                           <div class="text-lg md:text-2xl lg:text-3xl">
                           <DecryptedText
-                            text={service.title}
+                            text={service.label}
                             speed={100}
                             useOriginalCharsOnly={true}
                             animateOn="view"
@@ -151,14 +127,46 @@ const services = serviceDefs.map(s => ({
                         {service.description}
                       </p>
                       <div>
-                        {service.features.map((feature) => (
-                          <ScrollReveal client:load>
-                            <div class="flex text-it4a-primary items-center gap-3 py-1">
-                              <CheckCircle className="h-4 w-4 md:h-5 md:w-5" />
-                              <span class="text-gray-100 text-sm md:text-base">{feature}</span>
+                          {
+                                "details" in service && (
+                                  <ul>
+                                    { service.details.map((detail)=>(
+                                        <ScrollReveal client:load>
+                                          <li class="flex text-it4a-primary items-center gap-3 py-1">
+                                            <CheckCircle class="h-4 w-4 md:h-5 md:w-5" />
+                                            <span class="text-gray-100 text-sm md:text-md">
+                                              {detail}
+                                            </span>
+                                          </li>
+                                        </ScrollReveal>
+                                      ))
+                                    }
+                                  </ul>
+                                )
+                          }
+
+                        {
+                          "categories" in service && (
+                            <div class="space-y-4">
+                              {service.categories.map((cat)=>(
+                                <h4 class="text-white fonte-semibold mb-2">{cat.name}</h4>
+                                
+                                <ul class="space-y-2">
+                                  { cat.details.map((detail)=> (
+                                      <ScrollReveal client:load>
+                                      <li class="flex text-it4a-primary items-center gap-3 py-1">
+                                        <CheckCircle class="h-4 w-4 md:w-5 flex-shrink-0"/>
+                                        <span class="text-gray-100 text-sm md:text-md">{detail}</span>
+                                      </li>
+                                    </ScrollReveal>
+                                    ))
+                                  }
+                                </ul>
+                              ))}
                             </div>
-                          </ScrollReveal>
-                        ))}
+                          )
+                        }
+
                       </div>
                     </div>
                   </div>
@@ -169,7 +177,7 @@ const services = serviceDefs.map(s => ({
                       />
                       <img
                         src={service.img}
-                        alt={service.title}
+                        alt={service.label}
                         class="relative rounded-3xl shadow-2xl w-full h-48 md:h-64 lg:h-80 object-cover"
                       />
                     </div>

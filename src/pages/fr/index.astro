@@ -7,13 +7,14 @@ import CtaSection from '@/components/react/sections/CtaSection';
 import SectorsActiviter from '@/components/react/sections/SectorsActiviter';
 import SectionPartner from '@/components/react/sections/SectionPartner';
 import SplashScreen from "@/components/react/UI/components/SplashScreen";
+import SolutoinAccordion from '@/components/react/sections/SolutoinAccordion';
 
 import fr from "@/locales/fr.json";
 import en from "@/locales/en.json";
 
 const currentLocale = 'fr';
 const content = { fr, en };
-const t = content[currentLocale as keyof typeof content] || content.fr;
+const t = (content[currentLocale as keyof typeof content] || content.fr) as any;
 ---
 
 <Layout title="IT-EXPERTS-4-AFRICA | Home" langPath={currentLocale} >
@@ -21,8 +22,9 @@ const t = content[currentLocale as keyof typeof content] || content.fr;
     <ServicesSection client:load t={t} />
     <SectorsActiviter client:load t={t} />
     <SectionAbout client:only t={t} />
+    <SolutoinAccordion client:load t={t}/>
     <CtaSection  client:only t={t} />
     <SectionPartner client:only t={t} />
-            <!-- SplashScreen Component -->
-            <SplashScreen client:only />
+    <!-- SplashScreen Component -->
+    <SplashScreen client:only />
 </Layout>

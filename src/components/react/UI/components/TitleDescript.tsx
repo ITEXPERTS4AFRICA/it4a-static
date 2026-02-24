@@ -2,7 +2,7 @@ import DecryptedText from "../Text/DecryptedText";
 import {motion } from "framer-motion";
 
 type titleDescriptProst = {
-    title:string,
+    title?:string,
     title2?:string,
     descript?:string
     className?:React.ReactNode

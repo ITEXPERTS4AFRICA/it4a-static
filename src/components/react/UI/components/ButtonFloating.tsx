@@ -23,11 +23,11 @@ export default function ButtonFloating({ footer }: ButtonFloatingProps) {
 
             // Vérifier si l'utilisateur est proche du footer
             if (footer) {
-                const footerRect = footer.getBoundingClientRect();
+                const footerRect = footer.getBoundingClientRect;
                 const windowHeight = window.innerHeight;
 
                 // Si le haut du footer est visible dans la fenêtre
-                setIsNearFooter(footerRect.top < windowHeight - 100);
+                setIsNearFooter(footerRect < windowHeight - 100);
             }
         };
 
