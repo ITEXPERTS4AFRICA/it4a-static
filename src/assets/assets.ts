@@ -27,7 +27,8 @@ import SeaInvestLogo from '/image/refs/sea_invest_logo_small.webp?url';
 import BackgroundHero from '/image/sections/hero-network.webp?url';
 
 //image 
-import ImgAbout from '/image/sections/Gemini_Generated_Image_yhzphlyhzphlyhzp.webp?url';
+
+import ImgAbout from '/image/sections/img1.webp?url';
 import Profile1 from '/image/sections/profile-1.webp?url';
 import Profile2 from '/image/sections/profile-2.webp?url';
 import Profile3 from '/image/sections/profile-3.webp?url';
